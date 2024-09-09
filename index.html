@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Apuntes Puesta en producción segura.
+title: Apuntes Planificación y Administración de redes.
 ---
-<h1>Puesta en Producción Segura</h1>        
+<h1>Planificación y Administración de Redes</h1>        
 <img src='{{site.baseurl}}/assets/img/DevOps.png' alt='Puesta en producción segura'>
-    <h2>Tema 0 - Introducción a la programación</h2>
+    <h2>Unidad 1 - Caracterización de las redes </h2>
     <blockquote>
       En esta parte del módulo conoceremos las características básicas de los lenguajes de programación así como a familiarizarnos con la creación de software mediante el lenguaje de programación Python
     </blockquote>
@@ -16,7 +16,7 @@ title: Apuntes Puesta en producción segura.
     {% endif %}
 {% endfor %}
 </ol>
-    <h2>Tema 1 - Introducción</h2>
+    <h2>Unidad 2 - La capa Física</h2>
     <blockquote>
       En esta parte del módulo crearemos el entorno necesario que usaremos durante el resto del curso, 
       así como aprenderemos los conceptos básicos que nos servirán para empezar a familiarizarnos con el término
@@ -31,7 +31,7 @@ title: Apuntes Puesta en producción segura.
 {% endfor %}
 </ol>
 
-<h2>Tema 2 - Despliegue de software</h2>
+<h2>Unidad 3 - La capa de Red</h2>
 <blockquote>
   En esta parte del módulo aprenderemos <a href='https://www.docker.com/'>Docker.</a><br>
   Docker es un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.​ <br>
@@ -46,7 +46,7 @@ title: Apuntes Puesta en producción segura.
 {% endfor %}
 </ol>
 
-<h2>Tema 3 - Seguridad Web</h2>
+<h2>Unidad 4 - Capa de Enlace de Datos y Transporte</h2>
 <blockquote>
   En esta parte del módulo aprenderemos cómo desarrollar webs de forma segura y a detectar y corregir vulnerabilidades web
 </blockquote>
@@ -58,7 +58,7 @@ title: Apuntes Puesta en producción segura.
 {% endif %}
 {% endfor %}
 </ol>
-<h2>Tema 4 - Riesgos de seguridad en aplicaciones Web</h2>
+<h2>Unidad 5 - Configuración y administración de routers</h2>
 <blockquote>
   En esta parte del módulo aprenderemos a realizar ataques contra páginas web y aprenderemos cómo evitarlos.
 </blockquote>
@@ -70,7 +70,7 @@ title: Apuntes Puesta en producción segura.
 {% endif %}
 {% endfor %}
 </ol>
-<h2>Tema 5 - CD/CI</h2>
+<h2>Unidad 6 - Configuración de Redes Virtuales (VLANs)</h2>
 <blockquote>
 La CI/CD es un método para distribuir las aplicaciones a los clientes con frecuencia mediante el uso de la automatización en las etapas del desarrollo de aplicaciones. Los principales conceptos que se le atribuyen son la integración, la distribución y la implementación continuas. Se trata de una solución para los problemas que puede generar la integración del código nuevo para los equipos de desarrollo y de operaciones (también conocida como "el infierno de la integración").
 </blockquote>
@@ -82,7 +82,7 @@ La CI/CD es un método para distribuir las aplicaciones a los clientes con frecu
 {% endif %}
 {% endfor %}
 </ol>
-<h2>Tema 6 - Seguridad  móvil</h2>
+<h2>Unidad 7 - Configuración y administración de protocolos dinámicos</h2>
 <blockquote>
 En esta parte del módulo aprenderemos las características de seguridad de las aplicaciones móviles y aprederemos a analizar el código fuente en busca de vulnerabilidades
 </blockquote>
@@ -94,4 +94,16 @@ En esta parte del módulo aprenderemos las características de seguridad de las 
 {% endif %}
 {% endfor %}
 </ol>
+</ol>
+<h2>Unidad 8 - Configuración del acceso a Internet</h2>
+<blockquote>
+En esta parte del módulo aprenderemos las características de seguridad de las aplicaciones móviles y aprederemos a analizar el código fuente en busca de vulnerabilidades
+</blockquote>
 
+<ol class='portada'> 
+{% for post in site.posts reversed %}
+{% if post.categories contains "tema6" %}
+  <li><h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h4></li>
+{% endif %}
+{% endfor %}
+</ol>
