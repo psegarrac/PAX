@@ -2,8 +2,8 @@
 typora-copy-images-to: ../assets/img/inicprog/
 typora-root-url: ../../
 layout: post
-categories: tema0 Iniciación a la programación
-title: Iniciación a la programación
+categories: tema0 Arquitectura de redes
+title: Arquitectura de redes
 subtitle: Programación con Python
 conToc: true
 titlepage: true
@@ -13,7 +13,7 @@ urlcolor: CornflowerBlue
 linkcolor: black
 toc-own-page: true
 toc-title: Contenidos
-header-left: UD 0. Iniciación a la programación
+header-left: UD 0. Arquitectura de redes
 header-right: Ciberseguridad
 footer-left: IES El Caminàs
 footer-right: \thepage/\pageref{LastPage}
