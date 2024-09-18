@@ -4,7 +4,7 @@ typora-root-url: ../../
 layout: post
 categories: tema0 Arquitectura de redes
 title: Arquitectura de redes
-subtitle: Programación con Python
+subtitle: 
 conToc: true
 titlepage: true
 titlepage-background: assets/inicprog/dibujo.png
@@ -14,7 +14,7 @@ linkcolor: black
 toc-own-page: true
 toc-title: Contenidos
 header-left: UD 0. Arquitectura de redes
-header-right: Ciberseguridad
+header-right: Arquitectura
 footer-left: IES El Caminàs
 footer-right: \thepage/\pageref{LastPage}
 titlepage-rule-color: 1e2c37
