@@ -70,87 +70,23 @@ En la recepción del mensaje se sigue el orden inverso. Desde el nivel del **med
 
 En comunicaciones que implican atravesar diferentes redes para llegar al destino, el mensaje puede retransmitirse muchas veces. En cada salto o envío debe atravesar los niveles de rede en los puntos intermedios. Por ejemplo, cuando se envía un mensaje por internet, el mensaje (hasta el nivel de los protocolos de internet) será tratado y reenviado por cada **encaminador** o **router**.
 
-## ¿Qué es un programa?
+![Arquitectura de Red](/PAX/assets/arquitecturaRed3.png)
 
-Un primer paso para poder empezar a estudiar como es debido a hacer un programa informático es tener claro qué es un programa. En contraste con otras términos usados en informática, es posible referirse en un “programa” en el lenguaje coloquial sin tener que estar hablando necesariamente de ordenadores. Os podríais estar refiriendo en el programa de un ciclo de conferencias o de cine. Pero, a pesar de no tratarse de un contexto informático, este uso ya os aporta una idea general de su significado: un conjunto de acontecimientos ordenados de forma que suceden de forma secuencial en el tiempo, uno tras otro.
+## Modelos de referencia
 
-Otro uso habitual, ahora ya sí que vinculado al contexto de las máquinas y los autómatas, podría ser para referirse al programa de una lavadora o de un robot de cocina. En este caso, pero, lo que sucede es un conjunto no tanto de acontecimientos, sino de órdenes que el electrodoméstico sigue ordenadamente. Un vez seleccionado el programa que queremos, el electrodoméstico hace todas las tareas correspondientes de manera autónoma.
+Hay dos arquitecturas de red que se suelen usar como modelos de referencia para comparar o entender arquitecturas de red: OSI (Open System Interconnexion) de ISO (International Standard Organization) y TCP/IP. La primera no se usa en la práctica pero se suele usar como referencia para comparar otras arquitecturas. TCP/IP es el modelo en uso, pero no describe bien todos los niveles.
 
-Por ejemplo, el programa de un robot de cocina para hacer una crema de maíz sería:
+## Modelo OSI
 
-1. Espera a que introduzcáis maíz y mantequilla.
-2. Gira durante un minuto, avanzando progresivamente de la velocidad 1 a la 5.
-3. Espera a que introduzcáis leche y sal.
-4. Gira durante 30 segundos a velocidad 7.
-5. Gira durante 10 minutos a velocidad 3 mientras cuece a una temperatura de 90 grados.
-6. Se para. La crema está lista!
+OSI es una arquitectura de red. En OSI hay 7 niveles, algunos son muy complejos.
 
-Este conjunto de órdenes no es arbitrario, sino que sirve para llevar a cabo una tarea de cierta complejidad que no se puede hacer de un solo golpe. Se tiene que hacer paso a paso. Todas las órdenes están vinculadas entre sí para llegar a lograr este objetivo y, sobre todo, es muy importante el orden en que se llevan a cabo.
+![Arquitectura de Red](/PAX/assets/arquitecturaRed4.png)
 
-Entrando ya, ahora sí, en el mundo de los ordenadores, la manera como se estructura el tipo de tareas que estos pueden hacer tiene mucho en común con los programas de electrodomésticos. En este caso, en lugar de transformar ingredientes \(o lavar ropa sucia, si se tratara de una lavadora\), lo que el ordenador transforma es información o datos.
+La arquitectura de red OSI tiene los siguientes 7 niveles:
 
-> Un _programa informático_ no es más que una serie de órdenes que se llevan a cabo secuencialmente, aplicadas sobre un conjunto de datos.
 
-¿Qué datos procesa un programa informático? Bien, esto dependerá del tipo de programa:
+  
 
-* Un editor procesa los datos de un documento de texto.
-* Una hoja de cálculo procesa datos numéricos.
-* Un videojuego procesa los datos que dicen la forma y ubicación de enemigos y jugadores, etc.
-* Un navegador web procesa las órdenes del usuario y los datos que recibe desde un servidor a Internet.
-
-Por lo tanto, la tarea de un programador informático es escoger qué órdenes constituirán un programa de ordenador, en qué orden se tienen que llevar a cabo y sobre qué datos hay que aplicarlas, para que el programa lleve a cabo la tarea que tiene que resolver. La dificultad de todo será más grande o más pequeña dependiendo de la complejidad misma de aquello que hace falta que el programa haga. No es lo mismo establecer qué tiene que hacer el ordenador para resolver una multiplicación de tres números que para procesar textos o visualizar páginas a Internet.
-
-> **Ejecutar un programa**
->
-> Por “ejecutar un programa” se entiende hacer que el ordenador siga todas sus órdenes, desde la primera hasta la última.
-
-Por otro lado, una vez hecho el programa, cada vez que lo ejecutáis, el ordenador cumplirá todas las órdenes del programa.
-
-De hecho, un ordenador es incapaz de hacer absolutamente nada por si mismo, siempre hay que decirle qué tiene que hacer. Y esto se le dice mediante la ejecución de programas. A pesar de que desde el punto de vista del usuario puede parecer que cuando se pone en marcha un ordenador este funciona sin ejecutar ningún programa concreto, hay que tener en cuenta que su sistema operativo es un programa que está siempre en ejecución.
-
-## Tipo de órdenes que acepta un ordenador
-
-Para llevar a cabo la tarea encomendada, un ordenador puede aceptar diferentes tipos de órdenes. Estas se encuentran limitadas a las capacidades de los componentes que lo conforman, del mismo modo que el programa de una lavadora no puede incluir la orden de gratinar, puesto que no tiene gratinador. Por lo tanto, es importante tener presente este hecho para saber qué se puede pedir al ordenador cuando creáis un programa.
-
-La estructura interna del ordenador se divide en una serie de componentes, todos comunicados entre si, tal como muestra la siguiente figura de manera muy simplista, pero suficiente para empezar. Cada orden de un programa está vinculada de una manera u otra a alguno de estos componentes.
-
-![Componentes básicos de un ordenador](/Ciberseguridad-PePS/assets/img/inicprog/ic10mu1_01.png)
-
-> **Procesador**
->
-> El procesador también es conocido popularmente por sus siglas en inglés: CPU \(Central Processing Unit, unidad central de procesamiento\).
-
-El **procesador** es el centro neurálgico del ordenador y el elemento que es capaz de llevar a cabo las órdenes de manipulación y transformación de los datos. Un conjunto de datos se puede transformar de muchas maneras, según las capacidades que ofrezca cada procesador. Aún así, hay muchas transformaciones que todos pueden hacer. Un ejemplo es la realización de operaciones aritméticas \(suma, resto, multiplicación, división\), tal como hacen las calculadoras.
-
-La **memoria** permite almacenar datos mientras estas no están siendo directamente manipuladas por el procesador. Cualquier dato que tiene que ser tratado por un programa estará en la memoria. Mediante el programa se puede ordenar al procesador que guarde ciertos datos o que los recupere en cualquier momento. Normalmente, cuando se habla de memoria a este nivel nos referimos a memoria dinámica o RAM \(Random Access Memory, memoria de acceso aleatorio\). Esta memoria no es persistente y una vez acaba la ejecución del programa todos los datos con las cuales trataba se desvanecen. Por lo tanto, la información no se guardará entre sucesivas ejecuciones diferentes de un mismo programa.
-
-En ciertos contextos es posible que nos encontramos también con memoria ROM \(Read-Only memory, memoria sólo de lectura\). En esta, los datos están predefinidos de fábrica y no se puede almacenar nada, sólo podemos leer el que contiene. Hay que decir que no es el caso más habitual.
-
-El **sistema de entrada/salida** \(abreviado como E/S\) permite el intercambio de datos con el exterior del ordenador, más allá del procesador y la memoria. Esto permite traducir la información procesada en acciones de control sobre cualquier periférico conectado al ordenador. Un ejemplo típico es establecer una vía de diálogo con el usuario, ya sea por medio del teclado o del ratón para pedirle información, como por la pantalla, para mostrar los resultados del programa. Este sistema es clave para convertir un ordenador en una herramienta de propósito general, puesto que lo capacita para controlar todo tipo de aparatos diseñados para conectarse.
-
-Otra posibilidad importante del ordenador, atendidas las limitaciones del sistema de memoria, es poder interactuar con el hardware de almacenamiento persistente de datos, como un disco duro.
-
-> **Un ordenador es como una pizzería**
->
-> Si se quiere hacer un símil con nuestro mundo de cada día, un ordenador es como la cocina de una pizzería que acepta pedidos telefónicos. Hacer un pedido equivale a pedir el inicio de la ejecución de un programa. Para llevar a cabo este pedido, habrá que manipular una serie de ingredientes, que representarían los datos. El cocinero con sus enseres \(horno, pastador, etc.\) serían el procesador, puesto que manipulan y transforman los ingredientes. La nevera, los armarios o los contenedores, de donde el cocinero puede sacar ingredientes o donde los puede desar mientras no los está manipulando, representarían la memoria. El sistema de entrada/salida serían los elementos de comunicación con el exterior de la pizzería, como el motorista que trae la pizza o el teléfono que el cocinero puede utilizar para pedir que le traigan nuevos ingredientes cuando se le acaban, pedir información adicional al usuario \(“Se ha acabado el pimiento, va bien si ponemos cebolla?”\), o avisarlo de algún acontecimiento \(“Me sabe mal, tardará algo más del previsto”\). De hecho, continuando con el símil, el cocinero prepara una pizza siguiendo un conjunto de pasos. En este caso la receta son las órdenes que tiene que seguir el programa. Y si el cocinero no tiene la receta no puede llevar a cabo el pedido.
->
-> **Lenguaje natural**
->
-> El lenguaje natural es aquel que empleamos los humanos para comunicarnos habitualmente.
-
-Partiendo de esta descripción de las tareas que puede llevar a cabo un ordenador según los elementos que lo componen, un ejemplo de programa para multiplicar dos números es el mostrado a la **Tabla.1**. Lo tenéis expresado en lenguaje natural. Notad como los datos tienen que estar siempre almacenadas a la memoria para poder operar.
-
-**Tabla 1** Un programa que multiplica dos números usando lenguaje natural
-
-| Orden para dar | Elemento que lo efectúa |
-| :--- | :--- |
-| 1. Lee un número del teclado | E/S \(teclado\) |
-| 2. Guarda del número en memoria | Memoria |
-| 3. Lee otro número del teclado | E/S \(teclado\) |
-| 4. Guarda del número en memoria | Memoria |
-| 5. Recupera los números de la memoria y hace la multiplicación | Procesador |
-| 6. Guarda el resultado en memoria | Memoria |
-| 7. Muestra el resultado a la pantalla | E/S \(pantalla\) |
 
 ## Crear un programa ejecutable...
 
