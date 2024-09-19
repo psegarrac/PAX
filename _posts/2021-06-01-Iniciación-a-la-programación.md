@@ -62,9 +62,14 @@ Las normas y formatos de comunicación en un nivel deben respetarse para que la 
 Cuando se envía un mensaje desde el nivel más alto - de aplicación - , el mensaje atraviesa la pila de protocolos desde el nivel de aplicación hasta la **codificación** de información aplicando modificaciones sobre un medio físico (por ejemplo modificaciones de voltaje). Al atravesar cada nivel, cada nivel añade información al mensaje para que sea interpretada por ese mismo nivel en el ordenador que recibe el mensaje. Esta información se añade en **cabeceras** pero en algunos casos se añaden campos al final del mensaje.
 El formato de las cabeceras y la interpretación de sus campos se define en los protocolos del nivel respectivo.
 
-Cuando se pasa un mensaje al nivel inferior es necesario a veces trocear el mensaje en varias partes. Los protocolos de ese nivel incluyen medidas para que no se pierdan datos ni se modifique el orden inicial
+Cuando se pasa un mensaje al nivel inferior es necesario a veces trocear el mensaje en varias partes. Los protocolos de ese nivel incluyen medidas para que no se pierdan datos ni se modifique el orden inicial.
 
 ![Arquitectura de Red](/PAX/assets/arquitecturaRed2.png)
+
+En la recepción del mensaje se sigue el orden inverso. Desde el nivel del **medio físico** el mensaje va subiendo niveles hasta llegar a la aplicación a la que se destina el mensaje. En cada nivel se recupera, interpreta y elimina la cabecera que se trata en cada caso.
+
+En comunicaciones que implican atravesar diferentes redes para llegar al destino, el mensaje puede retransmitirse muchas veces. En cada salto o envío debe atravesar los niveles de rede en los puntos intermedios. Por ejemplo, cuando se envía un mensaje por internet, el mensaje (hasta el nivel de los protocolos de internet) será tratado y reenviado por cada **encaminador** o **router**.
+
 ## ¿Qué es un programa?
 
 Un primer paso para poder empezar a estudiar como es debido a hacer un programa informático es tener claro qué es un programa. En contraste con otras términos usados en informática, es posible referirse en un “programa” en el lenguaje coloquial sin tener que estar hablando necesariamente de ordenadores. Os podríais estar refiriendo en el programa de un ciclo de conferencias o de cine. Pero, a pesar de no tratarse de un contexto informático, este uso ya os aporta una idea general de su significado: un conjunto de acontecimientos ordenados de forma que suceden de forma secuencial en el tiempo, uno tras otro.
