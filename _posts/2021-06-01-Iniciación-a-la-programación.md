@@ -28,12 +28,35 @@ pandoc-latex-environment:
     cautionblock: [caution]
     importantblock: [important]
 ---
+# Redes de ordenadores
+Gran número de ordenadores interconectados e interactuando, distribuidos físicamente. Las comunicaciones son prioritarias respecto a la potencia de cálculo. Las redes de ordenadores se preocupan de sistemas independientes, cada ordenador es independiente y con su propio sistema operativo. Para comunicarse un ordenador con otro se usa algún sistema de comunicaciones (hardware y software).
+
+# Tipos de redes
+Existen muchos criterios de clasificación. Por ejemplo una clasificación se basa en la transmisión de datos. De esta manera distinguimos entre redes punto a punto y redes de difusión (broadcast).
+
+En las redes **punto a punto**  un mensaje se envía desde un ordenador a otro en una red. El envío puede ser directo (dos ordenadores conectados por un cable) o pueden pasar por routers o switches para establecer la comunicación.
+
+En las redes de **difusión** un mensaje es recibido por todos los ordenadores de la red pero como se pone la dirección de destino, probablemente solo el destinatario tratará el mensaje. Una red Wifi es un ejemplo de difusión, al enviar el mensaje cualquiera puede captarlo. Es estas redes, normalmente hay una dirección especial para indicar que el mensaje se envía a todos los ordenadores. A esta acción se le llama **difusión** o **broadcasting**. Otra posibilidad es enviar un mensaje a un grupo de ordenadores. A esta acción se le llama **multidifusión** o **multicasting**.
+
+Una siguiente clasificación se basa en la escala o tamaño geográfico de la red. Se puede diferenciar los siguientes tipos de red:
+
+* Redes de área personal. Personal Area Network (**PAN**). Cubre distancias de pocos metros. Bluetooth.
+* Redes de áreal local. Local Area Network (**LAN**) (de decenas de metros a km). Wifi, Ethernet por ejemplo. Suelen ser redes privadas de una casa o edificio. 
+* Redes de área metropolitana, Metropolitan Area Network (**MAN**) (dececnas de km). Por ejemplo redes de televisión por cable.
+* Redes de área amplia. Wide Area Network (**WAN**) (miles de Kms). La red de un proveedor de servicios de Internet (**ISP**).
+* Redes de redes, interredes (**Internet**). Se trata de conjuntos de redes interconectadas. Proporcionan un direccionamiento uniforme a redes de diferentes tecnologías y diferentes propietarios. Permiten por ejemplo comunicar un teléfono móvil con un servidor web.
+
 # Arquitecturas de red
-Los sistemas de redes informáticas se estructura en capas o nivelas para dividir un problema complejo en problemas más simples (Divide y vencerás). Las normas que organizan la comunicación son los **protocolos** de comunicación. Cada nivel en un punto de la red comunica con el nivel equivalente en la otra parte de la red.
+Los sistemas de redes informáticas se estructura en **capas o niveles** para dividir un problema complejo en problemas más simples (Divide y vencerás). Las normas que organizan la comunicación son los **protocolos** de comunicación. Cada nivel en un punto de la red comunica con el nivel equivalente en la otra parte de la red.
 
 Los protocolos de comunicación contienen el formato de los mensajes, los campos de los mismos, cómo actuar con estos campos, los permisos de comunicación y muchas más propiedades que veremos en detalle en el curso.
 
 La **arquitectura de red** es el conjunto de niveles y protocolos en los que se organiza el sistema de comunicaciones
+
+Un elemento de la red ofrece servicios a un nivel superior y usa los servicios del nivel inferior. El conjunto de funciones a través de las que se ofrecen esos servicios son las interfaces entre los niveles. El hecho de cumplir la misma arquitectura permitirá que los ordenadores con diferentes sistemas operativos (y diferentes implementaciones de la arquitectura de red) puedan comunicar.
+
+
+![Arquitectura de Red](/PAX/assets/arquitecturaRed.png)
 
 
 ## ¿Qué es un programa?
