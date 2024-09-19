@@ -28,9 +28,13 @@ pandoc-latex-environment:
     cautionblock: [caution]
     importantblock: [important]
 ---
-# Introducción
+# Arquitecturas de red
+Los sistemas de redes informáticas se estructura en capas o nivelas para dividir un problema complejo en problemas más simples (Divide y vencerás). Las normas que organizan la comunicación son los **protocolos** de comunicación. Cada nivel en un punto de la red comunica con el nivel equivalente en la otra parte de la red.
 
-Como en cualquier proceso de aprendizaje, hay que empezar por el principio. Es importante tener claros un conjunto de conceptos básicos que ayuden a comprender los conceptos más avanzados que vendrán posteriormente. En este caso, se trata de establecer qué es un programa, como funciona y qué es el modelo general para crear uno. Sólo una vez lo tengáis claro os podéis plantear sentaros ante el ordenador y empezar a programar.
+Los protocolos de comunicación contienen el formato de los mensajes, los campos de los mismos, cómo actuar con estos campos, los permisos de comunicación y muchas más propiedades que veremos en detalle en el curso.
+
+La **arquitectura de red** es el conjunto de niveles y protocolos en los que se organiza el sistema de comunicaciones
+
 
 ## ¿Qué es un programa?
 
