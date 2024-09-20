@@ -3,7 +3,7 @@ typora-copy-images-to: ../assets/img/inicprog/
 typora-root-url: ../../
 layout: post
 categories: tema0 Arquitectura de redes
-title: Arquitectura de redes
+title: Caracterización de las redes
 subtitle: 
 conToc: true
 titlepage: true
