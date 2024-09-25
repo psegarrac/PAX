@@ -84,11 +84,11 @@ OSI es una arquitectura de red. En OSI hay 7 niveles, algunos son muy complejos.
 
 La arquitectura de red OSI tiene los siguientes 7 niveles:
 
-   1.**Capa Física**. Cómo enviar datos sobre un medio físico.
+1.**Capa Física**. Cómo enviar datos sobre un medio físico.
 2.**Capa de Enlace de Datos**. Cómo organizar el envío de datos sobre un canal de comunicación. Preparar los mensajes, fiabilidad, ajuste de velocidad entre emisor y receptor, organización de los turnos de comunicación.
 3.**Capa de Red**. Direccionamiento y rutas para conectar diferentes redes y que puedan comunicar.
 4.**Capa de Transporte**. Preparar flujos de datos en mensajes. Comunicación fiable entre dos puntos.
-   5. **Capa de Sesión**. Permisos y organización de la comunicación.
+5. **Capa de Sesión**. Permisos y organización de la comunicación.
 6. **Capa de Presentación**. Tratar estructuras abstractas de datos para que puedan ser interpretadas de igual manera en diferentes ordenadores.
 7. **Capa de Aplicación**. Protocolos de las aplicaciones de los usuarios.
 
@@ -98,6 +98,10 @@ Este estándard no ha tenido éxito en la implementación.
 Es el modelo que se ha difundido en la industria y es el más utilizado actualmente. Está definido desde un punto de vista práctico más que en un modelo bien estructurado y definido. Describe las capas de los niveles de red, transporte y aplicación de OSI. Por debajo de la capa de red indica que existen primitivas para enviar mensajes.
 
 En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de datos y la capa física del modelo OSI. En definitiva veremos los niveles físico, enlace de datos, de red, de transporte y de aplicación.
+
+## Esquema general de las redes
+
+
 
 
 
