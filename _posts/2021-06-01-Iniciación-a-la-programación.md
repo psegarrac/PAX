@@ -108,6 +108,20 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
 
   ![Arquitectura de Red](/PAX/assets/arquitecturaRed6.png)
 
+* **POP** Punto de presencia. Los datos son separados del sistema telefónico. También indica dónde un operador llega con su red y puede vender conexión a sus clientes.
+* **ISP** Internet Service Provider. Hay diferentes niveles según las conexiones que tienen con otros operadores. Los operadores grandes (Tier I) poseen grandes redes con enlaces dorsales (**backbone**) que conectan países y continentes. Las redes ISPs forman **sistemas autónomos** (redes en las que se optimiza el encaminamiento y tiene un direccionamiento propio). Internet es la conexión de sistemas autónomos.
+* **IXP** (Internet eXchange Point). Son lugares donde los ISP llegan con su red y se intercambian tráfico y direccionamiento. Si el acuerdo de intercambio es entre operadores de tamaño similar es gratuito y se llama **peering**. En cambio un operador pequeño puede contratar mediante pago a uno grande para conectar con el resto de Internet. 
+* **IANA** (Internet Assigned Numbers Authority) es una organización repartida en regiones del mundo que va repartiendo **bloques de direcciones** de Internet. Cada sistema autónomo posee uno o varios bloques.
+* **NAP** (Network Access Point). Las dorsales y redes de operadores llegan a **encaminadores** (routers) que conectan entre ellos con redes de alta velocidad. Los **sistemas autónomos** también se conectan con estas ubicaciones. Lo mismo que los IXP
+* **Protocolos de encaminamiento**. Algoritmos para encontrar las rutas y las redes de forma **dinámica** tanto entre sistemas autónomos e internos a los sistemas autónomos.
+  
+  ## Estándares y unidades
+
+  
+
+
+  
+
 
 
 
