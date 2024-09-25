@@ -84,10 +84,10 @@ OSI es una arquitectura de red. En OSI hay 7 niveles, algunos son muy complejos.
 
 La arquitectura de red OSI tiene los siguientes 7 niveles:
 
-1.**Capa Física**. Cómo enviar datos sobre un medio físico.
-2.**Capa de Enlace de Datos**. Cómo organizar el envío de datos sobre un canal de comunicación. Preparar los mensajes, fiabilidad, ajuste de velocidad entre emisor y receptor, organización de los turnos de comunicación.
-3.**Capa de Red**. Direccionamiento y rutas para conectar diferentes redes y que puedan comunicar.
-4.**Capa de Transporte**. Preparar flujos de datos en mensajes. Comunicación fiable entre dos puntos.
+1. **Capa Física**. Cómo enviar datos sobre un medio físico.
+2. **Capa de Enlace de Datos**. Cómo organizar el envío de datos sobre un canal de comunicación. Preparar los mensajes, fiabilidad, ajuste de velocidad entre emisor y receptor, organización de los turnos de comunicación.
+3. **Capa de Red**. Direccionamiento y rutas para conectar diferentes redes y que puedan comunicar.
+4. **Capa de Transporte**. Preparar flujos de datos en mensajes. Comunicación fiable entre dos puntos.
 5. **Capa de Sesión**. Permisos y organización de la comunicación.
 6. **Capa de Presentación**. Tratar estructuras abstractas de datos para que puedan ser interpretadas de igual manera en diferentes ordenadores.
 7. **Capa de Aplicación**. Protocolos de las aplicaciones de los usuarios.
@@ -100,6 +100,13 @@ Es el modelo que se ha difundido en la industria y es el más utilizado actualme
 En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de datos y la capa física del modelo OSI. En definitiva veremos los niveles físico, enlace de datos, de red, de transporte y de aplicación.
 
 ## Esquema general de las redes
+
+  ## Origen de Internet
+  En 1950 se crea la red que se llamó **ARPANET** y la crea el **Departamento de Defensa** de los EEUU. El número de conexiones fué en aumento y rápidamente se fueron mejorando dorsales de interconexión., La evolución dió en lo que ahora es **Internet**
+
+  ## Estructura actual
+
+  ![Arquitectura de Red](/PAX/assets/arquitecturaRed6.png)
 
 
 
