@@ -90,9 +90,5 @@ La arquitectura de red OSI tiene los siguientes 7 niveles:
 
 
 
-> **Artificial**
-> Por artificial entendemos aquello que no ha evolucionado a partir del uso entre humanos, sino que ha sido creado expresamente, en este caso para ser usado con los ordenadores.
->
-> **Lenguaje de programación**
-> Para especificar las órdenes que tiene que seguir un ordenador el que se usa es un lenguaje de programación. Se trata de un lenguaje artificial diseñado expresamente para crear algoritmos que puedan ser llevados a cabo por el ordenador.
+
 
