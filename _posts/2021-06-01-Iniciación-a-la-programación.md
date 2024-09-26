@@ -117,7 +117,10 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
   
   ## Estándares y unidades
 
-  
+    ## Estándares
+    Con los estándares se consiguen que productos de diferentes marcas puedan comunicar entre sí. En las comunicaciones los estándares están destinados a los protocolos que son los que marcan cómo se hace l ainteracción entre los niveles de una arquitectura de red.
+
+    Internamente no se tiene por qué saber cómo está hecho el producto, pero debe cumplir los estándares. Hay estándares que se imponen en el mercado por su uso. Otros estándares 
 
 
   
