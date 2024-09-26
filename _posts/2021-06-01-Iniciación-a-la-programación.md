@@ -128,7 +128,7 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
     * **IEEE** (Institute of Electrical and Electronics Engineers). Se trata de la mayor organización de profesionales a nivel mundial. El comité 802 se encarga de proponer estándares para la mayor parte de redes de área local. El grupo de trabajo 802.3 se encarga de las redes Ethernet y el 802.11 de las redes Wifi.
     * **W3C** (World Wide Web Consortium). Es un consorcio de industriales que se encarga de protocolos y guías para la web.
 
- ## Estándares de Internet
+  ## Estándares de Internet
       A partir de los RFC, el ITF propone los estándares para Internet. Un RFC es un documento técnico donde se describe un problema o un nuevo sistema y se describe además cómo debe resolverse o qué debe cumplir una implementacñon.
       Los RFC se pueden consultar en www.left.org/rfc
 
