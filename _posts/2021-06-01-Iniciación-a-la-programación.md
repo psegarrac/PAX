@@ -101,10 +101,10 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
 
 ## Esquema general de las redes
 
-  ## Origen de Internet
+  ##Origen de Internet
   En 1950 se crea la red que se llamó **ARPANET** y la crea el **Departamento de Defensa** de los EEUU. El número de conexiones fué en aumento y rápidamente se fueron mejorando dorsales de interconexión., La evolución dió en lo que ahora es **Internet**
 
-  ## Estructura actual
+  ##Estructura actual
 
   ![Arquitectura de Red](/PAX/assets/arquitecturaRed6.png)
 
@@ -117,7 +117,7 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
   
   ## Estándares y unidades
 
-    ## Estándares
+    ##Estándares
     Con los estándares se consiguen que productos de diferentes marcas puedan comunicar entre sí. En las comunicaciones los estándares están destinados a los protocolos que son los que marcan cómo se hace l ainteracción entre los niveles de una arquitectura de red.
 
     Internamente no se tiene por qué saber cómo está hecho el producto, pero debe cumplir los estándares. Hay estándares que se imponen en el mercado por su uso. Otros estándares se desarrollan en grupos o comités de expertos. En los comités puede haber representantes de gobiernos y generalmente los estándares deben ser de obligado cumplimiento. 
@@ -128,7 +128,7 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
     * **IEEE** (Institute of Electrical and Electronics Engineers). Se trata de la mayor organización de profesionales a nivel mundial. El comité 802 se encarga de proponer estándares para la mayor parte de redes de área local. El grupo de trabajo 802.3 se encarga de las redes Ethernet y el 802.11 de las redes Wifi.
     * **W3C** (World Wide Web Consortium). Es un consorcio de industriales que se encarga de protocolos y guías para la web.
 
-      ## Estándares de Internet
+      ##Estándares de Internet
       A partir de los RFC, el ITF propone los estándares para Internet. Un RFC es un documento técnico donde se describe un problema o un nuevo sistema y se describe además cómo debe resolverse o qué debe cumplir una implementacñon.
       Los RFC se pueden consultar en www.left.org/rfc
 
