@@ -120,7 +120,19 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
     ## Estándares
     Con los estándares se consiguen que productos de diferentes marcas puedan comunicar entre sí. En las comunicaciones los estándares están destinados a los protocolos que son los que marcan cómo se hace l ainteracción entre los niveles de una arquitectura de red.
 
-    Internamente no se tiene por qué saber cómo está hecho el producto, pero debe cumplir los estándares. Hay estándares que se imponen en el mercado por su uso. Otros estándares 
+    Internamente no se tiene por qué saber cómo está hecho el producto, pero debe cumplir los estándares. Hay estándares que se imponen en el mercado por su uso. Otros estándares se desarrollan en grupos o comités de expertos. En los comités puede haber representantes de gobiernos y generalmente los estándares deben ser de obligado cumplimiento. 
+    Algunos grupos que revisan y proponen estándares en el mundo de las telecomunicaciones e Internet:
+    * **ITU** (International Telecommunication Union). Es un organismo internacional adscrito a la ONU con representantes de muchos países, fabricantes y empresas de telecomunicaciones. Se encargan de proponer estándares para sistemas de telefonía y comunicaciones de datos.
+    * **ISO** (International Standards Organization). Propone estándares internacionales para multitud de áreas. 
+    * **NIST** (National Institute of Standars and Technology). Es parte del Departamente de  comercio de EEUU.
+    * **IEEE** (Institute of Electrical and Electronics Engineers). Se trata de la mayor organización de profesionales a nivel mundial. El comité 802 se encarga de proponer estándares para la mayor parte de redes de área local. El grupo de trabajo 802.3 se encarga de las redes Ethernet y el 802.11 de las redes Wifi.
+    * **W3C** (World Wide Web Consortium). Es un consorcio de industriales que se encarga de protocolos y guías para la web.
+
+      ##Estándares de Internet
+      A partir de los RFC, el ITF propone los estándares para Internet. Un RFC es un documento técnico donde se describe un problema o un nuevo sistema y se describe además cómo debe resolverse o qué debe cumplir una implementacñon.
+      Los RFC se pueden consultar en www.left.org/rfc
+
+    
 
 
   
