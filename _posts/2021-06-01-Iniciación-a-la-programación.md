@@ -134,7 +134,11 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
 
     
 
+  ## Unidades
+  La cantidad de memoria se mide en potencias de 2. 
+  1 kByte = 1024 Bytes = 2 ^10 bytes. El ancho de banda de las redes se mide en bits/segundo y son potencias de 10.
 
+  ![Arquitectura de Red](/PAX/assets/arquitecturaRed8.png)
   
 
 
