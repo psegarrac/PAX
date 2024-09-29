@@ -49,3 +49,11 @@ Se pueden establecer consideraciones respecto a la atenuación:
 * La atenuación es una función creciente con la frecuencia. A frecuencias más altas se pierde o usa más energía.
 * La atenuación no afecta igual a todos los armónicos. Este efecto produce lo que se llama **distorsión por atenuación**
 
+Los dos primeros factores se resuelven controlando la energía de la señal con repetidores o amplificadores. El tercer factor, la **distorsión por atenuación** influye en la señal recibida con distorsión. Es más difícil reconocer la señal inicial. Se usan técnicas que ecualizan la atenuación.
+
+## Distorsión de retardo
+
+La distorsión de retardo es un fenómeno provocado por la velocidad de propagación de una señal a través de un medio guiado y que varía con la frecuencia. Esto hace que los distintos componentes en frecuencia de la señal lleguen al recpetor en diferentes instantes de tiempo dando lugar a desplazamientos de fase entre las diferentes frecuencias. Esto fenómeno es conocido como **distorsión de retardo** ya que la señal recibida está distorsionada debido al retardo.
+
+## Ruido
+
