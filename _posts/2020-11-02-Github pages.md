@@ -57,3 +57,9 @@ La distorsión de retardo es un fenómeno provocado por la velocidad de propagac
 
 ## Ruido
 
+Aparecen señales no deseadas en la transmisión de la señal entre el emisor y el receptor. La señal de ruido se puede clasificar en cuatro categorías:
+* **Ruido térmico**. Este es debido a la agitación térmica de los electrones y está presente en los dispositivos electrónicos y medios de transmisión. Se puede calcular la pérdida de energía por Hz en función de la tenperatura.
+* **Ruido de intermodulación** Se produce cuando las señales de distintas frecuencias comparten el mismo medio de transmisión. El efecto que se produce es la aparición de señales a frecuencias que sean suma o diferencia de las dos frecuencias originales.
+* **La diafonía**. Es típocio en comunicaciones telefónicas y consiste en acoplamiento no deseado entre diferentes líneas que transportan las señales. Este fenómeno se puede encontrar en líneas telefónicas, en líneas de cable coaxial, antenas de microondas, etc..
+* **El ruido impulsivo**. No es continuo y está constituido por pulsos o picos irregulares de corta duración y amplitud grande. Se produce por tormentas atmosféricas, fallos en sistemas de comunicaciones, etc...
+
