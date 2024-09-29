@@ -42,7 +42,7 @@ Las dificultades más importantes son:
 ## Atenuación
 En cualquier medio de trasmisión la energía de la señal decae con la distancia. En medios guiados, esta reducción de energía es por lo general exponencial y se expresa como un número constante de decibelidos por unidad de longitud. En medios no guiados, la atenuación es una función más compleja y depende de las condiciones atmosféricas.
 
-> En los **medios guiados** la señal se confina en un medio físico, por ejemplo en cables de cobre. fibra óptica. En medios *+no guiados** se usa el aire como medio físico.
+> En los **medios guiados** la señal se confina en un medio físico, por ejemplo en cables de cobre. fibra óptica. En medios **no guiados** se usa el aire como medio físico.
 
 Se pueden establecer consideraciones respecto a la atenuación:
 * La señal recibida debe tener suficiente energía para que el receptor pueda reproducirla adecuadamente.
