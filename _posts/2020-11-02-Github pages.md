@@ -2,12 +2,12 @@
 typora-copy-images-to: ../assets/img/github-pages/
 typora-root-url: ../../
 layout: post
-categories: tema1 git
-title: GitHub Pages
+categories: tema1 La capa Física
+title: Dificultades en la transmisión
 conToc: false
-subtitle: Creación de una página personal
+subtitle: Dificultades en la transmisión
 author:
-- Víctor Ponz
+- Pedro Segarra
 lang: es
 titlepage: true
 titlepage-background: assets/img/git-basico/dibujo.png
@@ -16,8 +16,8 @@ urlcolor: CornflowerBlue
 linkcolor: black
 toc-own-page: true
 toc-title: Contenidos
-header-left: UD 1. GitHub Pages
-header-right: Ciberseguridad
+header-left: UD 1. Dificultades en la transmisión
+header-right: Planificación y administración de redes
 footer-left: IES El Caminàs
 footer-right: \thepage/\pageref{LastPage}
 titlepage-rule-color: 1e2c37
@@ -31,45 +31,21 @@ pandoc-latex-environment:
     cautionblock: [caution]
     importantblock: [important]
 ---
-# GitHub Pages
-Ya que tenemos una cuenta en `GitHub`, vamos a usar la posibilidad de alojar una web estática personal en la url `https://nombre-de-usuario.github.io`
+# Dificultades en la transmisión
+Las dificultades más importantes son:
 
-Esta web la usaremos para realizar las actividades del módulo. De esta forma, podéis practicar con git y tener siempre actualizadas las mismas.
+* La **atenuación** y la **distorsión de la atenuación**
+* La **distorsión de retardo**
+* El **ruido**
+  
 
-> En mi opinión personal, la mejor herramienta para trabajar en formato **markdown** es [typora](https://typora.io/)
+## Atenuación
+En cualquier medio de trasmisión la energía de la señal decae con la distancia. En medios guiados, esta reducción de energía es por lo general exponencial y se expresa como un número constante de decibelidos por unidad de longitud. En medios no guiados, la atenuación es una función más compleja y depende de las condiciones atmosféricas.
 
-Hay muchas webs alojadas en `GitHub`: [Bootstrap](https://getbootstrap.com/), [Semantic UI](https://semantic-ui.com/), [Electron](https://www.electronjs.org/), [Foundation](https://get.foundation/), [Facebook design](https://design.facebook.com/), ...
+> En los **medios guiados** la señal se confina en un medio físico, por ejemplo en cables de cobre. fibra óptica. En medios *+no guiados** se usa el aire como medio físico.
 
-En las siguientes URLs tenéis más ejemplos:
-* [https://github.com/collections/github-pages-examples](https://github.com/collections/github-pages-examples)
-* [https://webdesignledger.com/best-github-project-pages/](https://webdesignledger.com/best-github-project-pages/)
-
-Crear una página personal o para un proyecto es muy sencillo (además de gratis):
-1. Crear un nuevo repositorio con el formato `username.github.io` donde `username` es vuestro nombre usuario de `GitHub`. También lo podéis crear en cualquier repositorio si os dais de alta en [GitHub Student Developer Pack](https://education.github.com/students)
-2. Clonar el repositorio en local
-```bash
-git clone https://github.com/username/username.github.io
-```
-Por ejemplo, en mi caso es:
-```bash
-git clone https://github.com/victorponz/victorponz.github.io
-```
-3. Ir al directorio local del proyecto y crear una página de ejemplo
-```bash
-cd victorponz.github.io
-echo "Hello World" > index.html
-```
-4. Hacer un `push`
-```bash
-git add --all
-git commit -m "Initial commit"
-git push -u origin master
-```
-5. Ya está!! https://victorponz.github.io/
-
-## Crea tu página personal
-
-> -task-**Tarea**
->
-> Crea tu página en GitHub Pages. Todas las prácticas que hagas, las has de crear como un nuevo post y en la tarea de Moodle hacer referencia al mismo
+Se pueden establecer consideraciones respecto a la atenuación:
+* La señal recibida debe tener suficiente energía para que el receptor pueda reproducirla adecuadamente.
+* La atenuación es una función creciente con la frecuencia. A frecuencias más altas se pierde o usa más energía.
+* La atenuación no afecta igual a todos los armónicos. Este efecto produce lo que se llama **distorsión por atenuación**
 
