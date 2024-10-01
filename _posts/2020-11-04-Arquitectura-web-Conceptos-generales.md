@@ -147,3 +147,4 @@ el sistema telefónico consiste en tres componentes principales:
 * Troncales (fibra óptica que conecta a las oficinas de conmutación).
 *  Oficinas de conmutación (donde las llamadas pasan de una troncal a otra).
 
+>Los circuitos locales son los que llegan a las casas de los usuarios finales. Son la parte más débil del sistema. En el caso de la comunicación a través de troncales, la principal consideración es cómo reunir múltiples llamadas y enviarlas juntas por la misma fibra. Esta operación se llama multiplexión y existen diversas formas de hacerlo. El sistema es jerárquico de forma que para conectar dos usuarios que quieren hablar, se sube en la jerarquía y se baja hasta conectar con el otro extremo.
