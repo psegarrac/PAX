@@ -120,3 +120,21 @@ El OLT debe indentificar los ONT que tiene conectados para aplicar una multiplex
 #### Transmisión inalámbrica
 En la transmisión inalámbrica, emisión y recepción se efectúa mediante antenas. En la emisión se radia energía electromagnética en el medio (generalmente aire). En la recepción se captan las ondas electromagnéticas del medio que rodea a la antena.
 
+![Tema1](/PAX/assets/img/tema1/Tema1_10.png)
+
+Las configuraciones de transmisión son:
+* **Direccional**: la antena transmisora emite concentrando la energía electromagnética en un haz, Las antenas de emisión y de recepción deben estar alineadas
+* **Omnidireccional**: la antena transmisora emite en todas direcciones con un diagrama de radiación disperso.
+
+Es más sencillo confinar la energía en un haz direccional cuanto mayor es la frecuencia de la señal. Los rangos de frecuencias considerados son los siguientes:
+
+* Microondas: comprende de los 2 a los 60 GHz. Los haces son altamente direccionales y apropiados para enlaces punto a punto. No atraviesan bien los edificios. También se utilizan para comunicaciones vía satélite. Cubren parte de la banda de UHF y totalmente la banda SHF.
+* 
+*Ondas de radio: comprende de los 30 MHz a 1 GHz. Son adecuadas para aplicaciones omnidireccionales. Cubren la banda VHF y parte de la banda UHF.
+
+*Infrarrojos: comprende de los 3 x 1011 a los 2 x 1014 Hz. Son útiles para conexiones locales punto a punto o para multipunto en áreas muy limitadas. No atraviesan obstáculos por eso se usan en los telemandos y detección de presencia para alarmas.
+
+*Microondas por satélite: un satélite de comunicaciones es básicamente una estación que retransmite microondas. Se utiliza como enlace entre dos o más receptores/transmisores terrestres llamados estaciones base. El modo de funcionamiento es el siguiente:
+  El satélite recibe la señal de una banda de frecuencia llamada canal ascendente. La señal es amplificada o repetida a otra banda de frecuencia llamada canal descendente.
+  Cada satélite operará en ciertas bandas de frecuencias llamadas transponders.
+  Las configuraciones posibles son: punto a punto entre dos antenas terrestres. Enlace de difusión entre una estación base terrestre transmisora y un conjunto de receptores terrestres.
