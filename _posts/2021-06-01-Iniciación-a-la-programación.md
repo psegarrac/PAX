@@ -31,7 +31,7 @@ pandoc-latex-environment:
 # Redes de ordenadores
 Gran número de ordenadores interconectados e interactuando, distribuidos físicamente. Las comunicaciones son prioritarias respecto a la potencia de cálculo. Las redes de ordenadores se preocupan de sistemas independientes, cada ordenador es independiente y con su propio sistema operativo. Para comunicarse un ordenador con otro se usa algún sistema de comunicaciones (hardware y software).
 
-# Tipos de redes
+## Tipos de redes
 Existen muchos criterios de clasificación. Por ejemplo una clasificación se basa en la transmisión de datos. De esta manera distinguimos entre redes punto a punto y redes de difusión (broadcast).
 
 En las redes **punto a punto**  un mensaje se envía desde un ordenador a otro en una red. El envío puede ser directo (dos ordenadores conectados por un cable) o pueden pasar por routers o switches para establecer la comunicación.
@@ -76,7 +76,7 @@ En comunicaciones que implican atravesar diferentes redes para llegar al destino
 
 Hay dos arquitecturas de red que se suelen usar como modelos de referencia para comparar o entender arquitecturas de red: OSI (Open System Interconnexion) de ISO (International Standard Organization) y TCP/IP. La primera no se usa en la práctica pero se suele usar como referencia para comparar otras arquitecturas. TCP/IP es el modelo en uso, pero no describe bien todos los niveles.
 
-## Modelo OSI
+### Modelo OSI
 
 OSI es una arquitectura de red. En OSI hay 7 niveles, algunos son muy complejos.
 
@@ -94,12 +94,12 @@ La arquitectura de red OSI tiene los siguientes 7 niveles:
 
 Este estándard no ha tenido éxito en la implementación.
 
-## Modelo TCP/IP
+### Modelo TCP/IP
 Es el modelo que se ha difundido en la industria y es el más utilizado actualmente. Está definido desde un punto de vista práctico más que en un modelo bien estructurado y definido. Describe las capas de los niveles de red, transporte y aplicación de OSI. Por debajo de la capa de red indica que existen primitivas para enviar mensajes.
 
 En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de datos y la capa física del modelo OSI. En definitiva veremos los niveles físico, enlace de datos, de red, de transporte y de aplicación.
 
-## Esquema general de las redes
+# Esquema general de las redes
 
 ## Origen de Internet
   En 1950 se crea la red que se llamó **ARPANET** y la crea el **Departamento de Defensa** de los EEUU. El número de conexiones fué en aumento y rápidamente se fueron mejorando dorsales de interconexión., La evolución dió en lo que ahora es **Internet**
@@ -115,9 +115,9 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
 * **NAP** (Network Access Point). Las dorsales y redes de operadores llegan a **encaminadores** (routers) que conectan entre ellos con redes de alta velocidad. Los **sistemas autónomos** también se conectan con estas ubicaciones. Lo mismo que los IXP
 * **Protocolos de encaminamiento**. Algoritmos para encontrar las rutas y las redes de forma **dinámica** tanto entre sistemas autónomos e internos a los sistemas autónomos.
   
-  ## Estándares y unidades
+## Estándares y unidades
 
-  ## Estándares
+### Estándares
     Con los estándares se consiguen que productos de diferentes marcas puedan comunicar entre sí. En las comunicaciones los estándares están destinados a los protocolos que son los que marcan cómo se hace l ainteracción entre los niveles de una arquitectura de red.
 
     Internamente no se tiene por qué saber cómo está hecho el producto, pero debe cumplir los estándares. Hay estándares que se imponen en el mercado por su uso. Otros estándares se desarrollan en grupos o comités de expertos. En los comités puede haber representantes de gobiernos y generalmente los estándares deben ser de obligado cumplimiento. 
@@ -128,13 +128,13 @@ En este módulo usaremos un modelo de TCP/IP añadiendo una capa de enlace de da
     * **IEEE** (Institute of Electrical and Electronics Engineers). Se trata de la mayor organización de profesionales a nivel mundial. El comité 802 se encarga de proponer estándares para la mayor parte de redes de área local. El grupo de trabajo 802.3 se encarga de las redes Ethernet y el 802.11 de las redes Wifi.
     * **W3C** (World Wide Web Consortium). Es un consorcio de industriales que se encarga de protocolos y guías para la web.
 
-  ## Estándares de Internet
+### Estándares de Internet
       A partir de los RFC, el ITF propone los estándares para Internet. Un RFC es un documento técnico donde se describe un problema o un nuevo sistema y se describe además cómo debe resolverse o qué debe cumplir una implementacñon.
       Los RFC se pueden consultar en www.left.org/rfc
 
     
 
-  ## Unidades
+### Unidades
   La cantidad de memoria se mide en potencias de 2. 
   1 kByte = 1024 Bytes = 2 ^10 bytes. El ancho de banda de las redes se mide en bits/segundo y son potencias de 10.
 
