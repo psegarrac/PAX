@@ -82,3 +82,13 @@ Consiste en un conductor cilíndrico externo que rodea un cable conductor. El co
 
 ![Tema1](/PAX/assets/img/tema1/Tema1_8.png)
 
+Se usa el coaxial para:
+* Distribución de televisión.
+Y tanto para transmitir señales analógicas como digitales. Ahora está llegando la conexión de fibra óptica alas casas y a veces se usa el coaxial entre la fibra y las viviendas.
+
+#### Líneas eléctricas
+Las líneas eléctricas pueden usarse como medio de transmisión además de proporcionar potencia eléctrica. Se pueden usar como redes metropolitanas en la red eléctrica o como redes de área local dentro de las casas. Se puede reaprovechar la infraestructura disponible. Su funcionamiento es usando una portadora sobre la que se modula la señal.
+
+En las casas se puede usar como LAN pero el problema viene porque la instalación no está pensada para transmisión de datos y puede sufrir mucho ruido. En las casas puede llegar a tasas de 100Mbps. Hay dispositivos económicos que se conectan a los enfuches de la casa y proporcionan una salida de cable UTP para conectar ordenadores o dispositivos de red. Estos conversores reciben el nombre de **PLC** (Power Line Communication).
+
+
