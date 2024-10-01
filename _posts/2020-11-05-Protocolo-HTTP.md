@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/HTTP/
 typora-root-url: ../../
 layout: post
-categories:  tema1 La capa Física
+categories: tema1 La capa Física
 title: Práctica 
 conToc: true
 subtitle: Montaje de cables

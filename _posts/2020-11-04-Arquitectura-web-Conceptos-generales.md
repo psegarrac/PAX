@@ -2,7 +2,6 @@
 typora-root-url: ../../
 typora-copy-images-to: ../assets/img/AWCG/
 layout: post
-categories: tema1
 categories: tema1 La capa Física
 conToc: true
 title: Medios de transmisión
