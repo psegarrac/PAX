@@ -95,3 +95,6 @@ En las casas se puede usar como LAN pero el problema viene porque la instalació
 Es un medio flexible y fino capaz de conducir energía de naturaleza óptica. Su diámetro varía entre 2 y 125 micrómetros. Se puede construir con diversos tipos de vidreos y plásticos. El mejor material está hecho de fibras de silicio fundido ultra puro. Sin embargo, las fibras de cristal tienen mayores pérdidas, pero son más baratas. Las fibras de plástico tienen mayores pérdidas y menor coste, pro consigue distancias aceptables para distancias cortas (hasta 500 metros).
 
 El principio de funcionamiento de la fibra óptica ensiste en ángulos de emisión de luz que se refleja internamente en la fibra (no existe refracción).
+Se pueden usar diferentes ángulos de emisión para enviar varias señales simultáneamente (**fibra multimodo**) o fibras más estrechas en las que no hay rebotes y la luz viaja directamente (**fibras monomodo**).
+Ahora mismo como los precios se acercan y las monomodo permiten distancias y anchos de banda mayores son las más usadas. Valores comunes son 100 Gbps a 100km sin amplificadores.
+
