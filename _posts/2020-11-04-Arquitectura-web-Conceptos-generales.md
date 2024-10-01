@@ -66,4 +66,19 @@ La diferencia entre los cables tipo 3 y 5 están en el número de tranas por uni
 
 ![Tema1](/PAX/assets/img/tema1/Tema1_5.png)
 
+La evolución de las categorías van cambienado, existe UTP 5e o 6 que transmiten a 100Mbps y 1Gbps a una distancia de 100m.
+
+> Hay combinaciones de colores para los conectores RJ45. Si se pone el mismo estándar en los dos extremos hacemos un cable directo. Si se pone A en un extremo y B en el otro es un cable cruzado. El cable directo se usa para conectar una tarjeta de red con un dispositivo de red (switch). El cable cruzado para conectar dos tarjetas de red directamente. Ahora cada vez las tarjetas y switches admiten ambas configuracies. OJO con las instalaciones antiguas.
+
+![Tema1](/PAX/assets/img/tema1/Tema1_7.png)
+
+Los cables de categoría 7 llevan apantallamiento para cada par y un apantallamiento para los 4 pares. Así se puede obtener cada vez mayor inmunidad al ruido y mayor ancho de banda. Con categoría 6 se podría alcanzar 10Gbps en enlaces cortos.
+
+Hasta tasas de 100Mbps se puede usar cables de categoría 5 y solo se usan 2 de los 4 pares que contienen. Para tasas mayores se usan los 4 pares de cables.
+
+#### Cable Coaxial
+
+Consiste en un conductor cilíndrico externo que rodea un cable conductor. El conductor interior se mantiene a lo largo del eje axial mediante una serie de anillos aislantes o mediante un sólido dieléctrico. El conductor exterior se cubre con una funda protectora. El diametro va desde 1 a 2.5 centímetros. Es menos susceptible a interferencias y diafonías que el par trenzado. Cubre mayores distancias. 
+
+![Tema1](/PAX/assets/img/tema1/Tema1_8.png)
 
