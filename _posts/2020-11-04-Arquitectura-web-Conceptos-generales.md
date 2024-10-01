@@ -102,3 +102,11 @@ El cable de fibra óptica es cilíndrico y posee 3 secciones concéntricas: el n
 En una manguera de fibra puede ir varias grupos de fibras. Por ejemplo 8 grupos de 8 fibras, lo que son 64 fibras individuales. Estos grupos luego pueden ir recubiertos por varias capas para darle resistencia y protección. Por ejemplo, resistencia mecánica a la tracción, resistencia a la intemperie o la humedad o incluso protección ante la presencia de roedores.
 
 ![Tema1](/PAX/assets/img/tema1/Tema1_9.png)
+
+Es muy utilizada en las telecomunicaciones a larga distancia. Su costo es progresivamente menor y su continuo perfeccionamiento la hacen apropiada para entornos LAN (redes de área local). Las principales ventajas respecto del coaxial y par trenzado son:
+* Mayor ancho de banda. De hecho actualmente el límite de tasa de envío se produce por la conversión de luz a señal eléctrica, no por ocupar el ancho de banda el medio.
+*Menor tamaño y peso: la reducción de tamaño y peso para capacidades comparables es de 10 a 1.
+*Atenuación menor: la atenuación es menor y constante en un gran intervalo de frecuencias.
+*Aislamiento electromagnético: la fibra óptica no se ve afectada por los campos electromagnéticos exteriores. No es vulnerable a interferencias, ruido impulsivo ni diafonía, lo cual es una ventaja en entornos industriales.
+*Mayor separación entre los repetidores: significa menor costo y menos fuentes de error. Se han conseguido 3.5 Gbps en distancias de 318 Kilómetros sin repetidores.
+*El precio actualmente es atractivo frente al cobre.
