@@ -2,7 +2,7 @@
 typora-copy-images-to: ../../assets/img/apache/
 typora-root-url: ../../
 layout: post
-categories: tema1 apache
+categories: apache
 title: Apache
 conToc: true
 title: Apache

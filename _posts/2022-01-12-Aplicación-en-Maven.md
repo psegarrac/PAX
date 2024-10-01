@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/sac/
 typora-root-url: ../../
 layout: post
-categories: tema5 CD/CI
+categories: CD/CI
 title:  Aplicación java en maven
 conToc: true
 subtitle: 

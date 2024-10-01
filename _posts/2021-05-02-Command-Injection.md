@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/fileupload
 typora-root-url: ../../
 layout: post
-categories: tema4 Command Injection
+categories: Command Injection
 title: Command Injection
 conToc: false
 author: Víctor Ponz

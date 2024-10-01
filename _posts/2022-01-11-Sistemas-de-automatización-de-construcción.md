@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/sac/
 typora-root-url: ../../
 layout: post
-categories: tema5 CD/CI
+categories: CD/CI
 title: Sistemas de automatización de la construcción
 conToc: true
 subtitle: Gradle, npm, composer, nuget

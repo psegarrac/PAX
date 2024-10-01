@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/AppPhyton/
 typora-root-url: ../../
 layout: post
-categories: tema2 Aplicación en Python
+categories: Aplicación en Python
 title: Aplicación en Python
 conToc: true
 subtitle: Usando docker-compose

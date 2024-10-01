@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/Seguridad-docker/
 typora-root-url: ../../
 layout: post
-categories: tema3 Seguridad Web
+categories: Seguridad Web
 title: Ciclo de desarrollo seguro de software
 conToc: false
 header-includes: |

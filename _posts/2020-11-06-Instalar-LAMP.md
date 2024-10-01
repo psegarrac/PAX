@@ -2,7 +2,7 @@
 typora-root-url: ../../
 typora-copy-images-to: ../assets/img/LAMP/
 layout: post
-categories: tema1 apache
+categories: apache
 conToc: true
 title: LAMP
 subtitle: Instalación de la pila LAMP

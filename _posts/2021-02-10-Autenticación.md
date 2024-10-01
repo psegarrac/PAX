@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/autenticacion/
 typora-root-url: ../../
 layout: post
-categories: tema3 Seguridad Web
+categories: Seguridad Web
 title: Autenticación
 conToc: true
 author:

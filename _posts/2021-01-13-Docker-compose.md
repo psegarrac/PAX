@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/docker-compose/
 typora-root-url: ../../
 layout: post
-categories: tema2 Docker
+categories:  Docker
 title: Docker Compose
 conToc: true
 subtitle: Primeros pasos

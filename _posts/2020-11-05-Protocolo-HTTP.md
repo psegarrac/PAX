@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/HTTP/
 typora-root-url: ../../
 layout: post
-categories: tema1 HTTP
+categories:  HTTP
 title: Protocolo HTTP
 conToc: true
 subtitle: Conceptos generales

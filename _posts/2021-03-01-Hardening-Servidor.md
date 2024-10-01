@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/hardening/
 typora-root-url: ../../
 layout: post
-categories: tema3 Seguridad Web
+categories: Seguridad Web
 title: Hardening del servidor
 author: Víctor Ponz
 conToc: true

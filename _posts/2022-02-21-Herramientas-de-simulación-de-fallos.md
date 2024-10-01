@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/fallos/
 typora-root-url: ../../
 layout: post
-categories: tema5 CD/CI
+categories: CD/CI
 title:  Herramientas de simulación de fallos
 conToc: true
 render_with_liquid: false

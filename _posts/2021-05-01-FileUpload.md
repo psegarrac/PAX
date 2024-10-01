@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/fileupload
 typora-root-url: ../../
 layout: post
-categories: tema4 File Upload
+categories: File Upload
 title: File Upload
 conToc: false
 author: Víctor Ponz

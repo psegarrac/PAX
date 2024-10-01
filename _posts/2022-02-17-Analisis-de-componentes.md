@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/dependencias/
 typora-root-url: ../../
 layout: post
-categories: tema5 CD/CI
+categories: CD/CI
 title:  Análisis de componentes
 conToc: true
 subtitle: 

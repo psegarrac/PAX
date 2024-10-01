@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/Seguridad-docker/
 typora-root-url: ../../
 layout: post
-categories: tema3 Seguridad Web
+categories: Seguridad Web
 title: Seguridad en docker
 conToc: true
 author: Víctor Ponz

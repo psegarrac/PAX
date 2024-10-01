@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/cloud/
 typora-root-url: ../../
 layout: post
-categories: tema2 Docker
+categories: Docker
 title: Google Cloud
 conToc: false
 subtitle: Primeros pasos

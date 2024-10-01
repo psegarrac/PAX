@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/validacion/
 typora-root-url: ../../
 layout: post
-categories: tema3 Seguridad Web
+categories: Seguridad Web
 title: Validación de entradas
 conToc: true
 subtitle: Riesgos OWASP

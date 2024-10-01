@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/inversa/
 typora-root-url: ../../
 layout: post
-categories: tema6 Seguridad móvil
+categories: Seguridad móvil
 title:  Ingeniería inversa en Android
 conToc: true
 render_with_liquid: false
