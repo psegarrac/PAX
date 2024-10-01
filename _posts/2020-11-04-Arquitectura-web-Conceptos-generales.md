@@ -148,3 +148,10 @@ el sistema telefónico consiste en tres componentes principales:
 *  Oficinas de conmutación (donde las llamadas pasan de una troncal a otra).
 
 >Los circuitos locales son los que llegan a las casas de los usuarios finales. Son la parte más débil del sistema. En el caso de la comunicación a través de troncales, la principal consideración es cómo reunir múltiples llamadas y enviarlas juntas por la misma fibra. Esta operación se llama multiplexión y existen diversas formas de hacerlo. El sistema es jerárquico de forma que para conectar dos usuarios que quieren hablar, se sube en la jerarquía y se baja hasta conectar con el otro extremo.
+
+### Circuito local: modems, ADSL
+
+Al circuito local también se le llama **última milla o bucle de abonado**.
+Durante más de 100 años la comunicación en circuitos locales se ha realizado mediante señalización analógica. Así cuando una computadora desea enviar datos digitales sobre una línea analógica de acceso telefónico, es necesario convertir primero los datos a formato analógico para transmitirlos sobre un circuito local. Un dispositivo conocido como módem realiza esta conversión. Cuando los datos llegan a la oficina central de la compañía telefónica, los datos se convierten a formato digital para transmitirlos sobre las troncales a largas distancias. 
+Al codificar información digital en un medio físico (la modulación), hay dos maneras de hacerlo. En **banda base** la señal se codifica directamente, usando desde la frecuencia cero a la frecuencia que sea adecuada. El ejemplo más simple es que con un voltaje 0 se envía un bit 0 y con un voltaje 1 se envía un bit 1. Este modo de transmisión suele usarse en cables. Otra manera, que vamos a ver como ejemplo se llama transmisión **pasabanda**. En este caso se modifican características de una señal periódica portadora, la cual ya tiene una frecuencia, para codificar información. Usando portadoras a diferentes frecuencias se puede multiplexar diferentes comunicaciones sobre el mismo medio físico. Suele usarse en comunicaciones inalámbricas y ópticas.
+
