@@ -138,3 +138,12 @@ Es más sencillo confinar la energía en un haz direccional cuanto mayor es la f
   El satélite recibe la señal de una banda de frecuencia llamada canal ascendente. La señal es amplificada o repetida a otra banda de frecuencia llamada canal descendente.
   Cada satélite operará en ciertas bandas de frecuencias llamadas transponders.
   Las configuraciones posibles son: punto a punto entre dos antenas terrestres. Enlace de difusión entre una estación base terrestre transmisora y un conjunto de receptores terrestres.
+
+## Red Telefónica
+La red telefónica pública conmutada fue diseñada hace años con el propósito de transmitir voz. Su aplicabilidad en las comunicaciones entre ordenadores es limitada, aunque esta situación ha cambiado gracias a las troncales de fibra óptica entre las centralitas y la tecnología digital. Para ver las diferencias con una red local, un cable entre dos computadoras puede transferir a 109 bps, mientras que una línea de acceso telefónico tiene una tasa máxima de 56 kbps, con lo que es casi 20000 veces más lento. En el caso de establecer una conexión ADSL, sigue habiendo una diferencia de un factor de 1000 a 2000 veces.
+
+el sistema telefónico consiste en tres componentes principales:
+* Circuitos locales (cables de par trenzado que van hacia las casas y las empresas).
+* Troncales (fibra óptica que conecta a las oficinas de conmutación).
+*  Oficinas de conmutación (donde las llamadas pasan de una troncal a otra).
+
