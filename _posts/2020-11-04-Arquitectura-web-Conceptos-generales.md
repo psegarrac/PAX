@@ -160,7 +160,23 @@ En el bucle de abonado se usa codificación pasabanda porque se adapta mejor a l
 Veamos algunos ejemplos de modulación pasabanda. Lo que se hace es, sobre una señal periódica sinusoidal (como la de la corriente alterna, por ejemplo) a la que llamamos **portadora de onda sinusoidal**, aplicar modificaciones de su amplitud, frecuencia o fase para codificar bits.
 Ejemplos de estas modificaciones:
 * En la modulación de amplitud se puede usar dos niveles diferentes de amplitud para representar el 0 y 1, respectivamente.
-*En la modulación de la frecuencia o modulación por desplazamiento de la frecuencia, se usan dos o más frecuencias diferentes. 
-*En la forma más simple de la modulación de fase la onda portadora se desplaza 0 ó 180 grados según se transmita un bit 0 ó 1. Un mejor esquema es utilizar desplazamientos de 45, 135, 225 ó 315 grados para transmitir 2 bits de información por intervalo.
-*Se puede combinar más de una modificación como las anteriores para intentar enviar varios bits a la vez.
+* En la modulación de la frecuencia o modulación por desplazamiento de la frecuencia, se usan dos o más frecuencias diferentes. 
+* En la forma más simple de la modulación de fase la onda portadora se desplaza 0 ó 180 grados según se transmita un bit 0 ó 1. Un mejor esquema es utilizar desplazamientos de 45, 135, 225 ó 315 grados para transmitir 2 bits de información por intervalo.
+* Se puede combinar más de una modificación como las anteriores para intentar enviar varios bits a la vez.
+
+Todos los módems modernos transmiten tráfico en ambas direcciones al mismo tiempo. La conexión que permite el flujo de tráfico en ambas direcciones de manera simultánea se conoce como **dúplex total**. La conexión que permite el tráfico en ambas direcciones, pero sólo un sentido a la vez, se denomina **semidúplex**. Por último, un conexión que permite el tráfico en un sólo sentido se conoce como **simplex**.
+
+#### ADSL
+
+Los 56 kbps que ofrecen los módems sobre un canal de voz de 3000Hz es insuficiente, especialmente para competir con otro tipo de redes como la televisión por cable. Una de las soluciones sobre la red de telefonía fue el ADSL (Línea de suscriptor digital asimétrica).
+La primera versión de ADSL funcionaba dividiendo el espectro disponible en el circuito local, de alrededor de 1.1 MHz, en tres bandas de frecuencia: POTS, Servicio Telefónico Convencional, canal ascendente (del usuario a la oficina central) y canal descendente (de la oficina central al usuario). Otro enfoque llamado DMT, MultiTono Discreto, lo que hace es dividir el espectro disponible de 1.1 MHz en el circuito local en 256 canales independientes de 4312.5 Hz cada uno. El canal 0 se utiliza para el POTS (telefonía) y los canales 1-5 no se emplean para evitar interferencias. De los 250 canales restantes, uno se utiliza para control del flujo ascendente y uno para el control del flujo descendente. El resto está disponible para datos del usuario. Estos canales son unidireccionales y se utilizan más canales para bajar datos que para subir datos, de ahí el nombre de asimétrico.
+El funcionamiento conceptualmente es como si tuviésemos un módem en cada uno de esos 250 canales. En realidad el módem ADSL tiene un procesador digital de señal que atiende cada uno de los canales.
+
+El estandar ADSL (ANSI T1.413 y el ITU G.992.1) permite velocidades de hasta 8 Mbps para el flujo descendente y 1 Mbps para el flujo ascendente. Al reducir la distancia de bucles de abonado y mejoras en la codificación han aumentado estas prestaciones.
+
+## Transmisiones inalámbricas. Wifi
+#### Potencias de emisión
+Tenemos unos límites muy reducidos de potencia de emisión en las bandas de frecuencia no licenciadas (no es necesario una licencia ni pagar por usarlas). Esto es bueno porque permite coexistir a muchas redes, pero puede que en el exterior sea demasiado restrictivo. Probablemente se debería solicitar un cambio legislativo.
+Como se matiza más adelante, estos límites tienen un efecto sobre la economía y el uso compartido pero no están fijados por tener un impacto sanitario o ambiental. Para esos efectos hay otros límites que también deben cumplir las bandas licenciadas, en las cuales se puede usar mayor potencia que en las libres (en el caso de telefonía móvil, por ejemplo 500 veces más).
+La banda de 2,4GHz está pensada para redes de interior de edificios. Se permite muy poca potencia, 100miliWatios PIRE. Dispone de muy pocos canales (14 canales en los que además se produce solapamiento)
 
