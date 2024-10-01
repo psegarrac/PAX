@@ -64,6 +64,6 @@ En 1995 se propuso el estándar EIA-568-A que contempla avances en el diseño de
 
 La diferencia entre los cables tipo 3 y 5 están en el número de tranas por unidad de distancia. Tipo 3 contiene una trenza cada 7 o 10 centímetros mientras que tipo 5 contiene 1 a 2 trenzas por centímetro. En el tipo 5 hay aislamiento de teflón.
 
-
+![Tema1](/PAX/assets/img/tema1/Tema1_5.png)
 
 
