@@ -32,3 +32,6 @@ pandoc-latex-environment:
     importantblock: [important]
 ---
 
+## Práctica
+
+Realiza la práctica de montar un cable directo y uno cruzado rj45
