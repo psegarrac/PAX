@@ -42,3 +42,4 @@ Existen diferentes técnicas para enmarcar las tramas:
 
 El primer byte de cada trama indica el número de bytes de la trama. El problema de este sistema es que si se produce un error provoca una perdida de la sincronía y es difícil recuperarse.
 
+![Tema1](/PAX/assets/tema4_1.png)
