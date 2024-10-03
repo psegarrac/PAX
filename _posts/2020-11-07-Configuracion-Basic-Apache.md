@@ -2,13 +2,13 @@
 typora-copy-images-to: ../../assets/img/apache/
 typora-root-url: ../../
 layout: post
-categories: apache
-title: Apache
+categories: tema4 Capa de enlace de datos
+
 conToc: true
-title: Apache
-subtitle: Configuración básica
+title: Enmarcado de tramas
+subtitle: 
 author:
-- Víctor Ponz
+- Pedro Segarra
 lang: es
 titlepage: true
 titlepage-background: assets/img/git-basico/dibujo.png
