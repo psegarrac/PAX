@@ -2,7 +2,7 @@
 typora-root-url: ../../
 typora-copy-images-to: ../assets/img/LAMP/
 layout: post
-categories: tema2 Capa de enlace de datos 
+categories: tema3 Capa de enlace de datos 
 conToc: true
 title: Tipos de servicio a la capa de red
 subtitle: 
