@@ -48,3 +48,9 @@ El primer byte de cada trama indica el número de bytes de la trama. El problema
 En este método se usan caracteres especiales (flags) que indican el inicio y el fin de una trama. El problema es que esos caracteres podrían estar dentro de los datos y llevar a confusión. Para quitar el significado especial, se usa otro carácter especial (esc). Pero también esc podría formar parte de los datos. Lo que se hace es preceder con esc cada aparición de uno de estos dos caracteres en los datos (la carga útil) de la trama. Cuando se recibe la trama, cada vez que se encuentra el carácter esc se retira y se deja el carácter siguiente tomándolo como un carácter normal de los datos. 
 
 ![Tema4](/PAX/assets/tema4_2.png)
+
+## Banderas con bits de relleno
+El problema de usar banderas con bytes de relleno es la dependencia de la codificación con 8 bits. Un método más general es usar banderas o indicadores con bits de relleno. En este caso una combinación de bits se usa como separador o delimitador. Por ejemplo 01111110. Para evitar que esta combinación aparezca en los datos, el emisor cada vez que tiene que enviar 5 unos en los datos, añade un cero. La única palabra con 6 unos seguidos será el delimitador. El receptor cada vez que observa 5 unos y un cero, elimina el cero para restituir los datos iniciales. Una ventaja de usar bits de relleno es que se necesita introducir menos bits para que funcione, lo cual lo hace más eficiente.
+
+![Tema4](/PAX/assets/tema4_3.png)
+
