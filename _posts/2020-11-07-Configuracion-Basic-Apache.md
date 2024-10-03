@@ -42,4 +42,9 @@ Existen diferentes técnicas para enmarcar las tramas:
 
 El primer byte de cada trama indica el número de bytes de la trama. El problema de este sistema es que si se produce un error provoca una perdida de la sincronía y es difícil recuperarse.
 
-![Tema1](/PAX/assets/tema4_1.png)
+![Tema4](/PAX/assets/tema4_1.png)
+
+## Banderas con bytes de relleno
+En este método se usan caracteres especiales (flags) que indican el inicio y el fin de una trama. El problema es que esos caracteres podrían estar dentro de los datos y llevar a confusión. Para quitar el significado especial, se usa otro carácter especial (esc). Pero también esc podría formar parte de los datos. Lo que se hace es preceder con esc cada aparición de uno de estos dos caracteres en los datos (la carga útil) de la trama. Cuando se recibe la trama, cada vez que se encuentra el carácter esc se retira y se deja el carácter siguiente tomándolo como un carácter normal de los datos. 
+
+![Tema4](/PAX/assets/tema4_2.png)
