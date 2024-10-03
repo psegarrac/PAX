@@ -2,12 +2,12 @@
 typora-root-url: ../../
 typora-copy-images-to: ../assets/img/LAMP/
 layout: post
-categories: apache
+categories: tema2 Capa de enlace de datos 
 conToc: true
-title: LAMP
-subtitle: Instalación de la pila LAMP
+title: Tipos de servicio a la capa de red
+subtitle: 
 author:
-- Víctor Ponz
+- Pedro Segarra
 lang: es
 titlepage: true
 titlepage-background: assets/img/git-basico/dibujo.png
