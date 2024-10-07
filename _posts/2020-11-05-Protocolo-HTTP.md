@@ -54,4 +54,14 @@ los cables no trenzados ya que las secciones excesivamente largas ubicadas cerca
 6. Coloca un conector RJ-45, con la lengüeta hacia abajo, en el extremo del cable con el par verde en el lado izquierdo del extremo T568-A, y el par naranja en el lado izquierdo del extremo T568-B. 
 
 ![Tema2](/PAX/assets/img/tema1/tema1_c.png)
-7. 
+7. Empuja suavemente los hilos dentro del conector hasta que puedas ver los extremos de cobre de los hilos a través del extremo del conector. Asegúrate de que el
+extremo de la envoltura esté ubicado dentro del conector y de que todos los hilos estén en el orden correcto. Si la envoltura no está ubicada dentro del conector, el conector no estará correctamente ajustado y con el tiempo esto causará problemas. Si todo está en
+orden, engarce el conector con la suficiente fuerza como para forzar los contactos a través del aislamiento en los hilos, completando así el camino conductor.
+
+![Tema2](/PAX/assets/img/tema1/tema1_d.png)
+
+8. Repite los pasos del 4 al 8 para terminar el otro extremo del cable,
+utilizando el esquema T568-A para terminar el cable de interconexión cruzada.
+9. Prueba el cable terminado. Haz que el profesor lo pruebe. ¿Cómo es
+posible saber si el cable está funcionando correctamente?
+
