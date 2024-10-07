@@ -49,4 +49,4 @@ que se colocan a presión en los jacks.
 aproximadamente 1,25 cm a 1,90 cm del borde de la envoltura. Asegúrate de no soltar la envoltura y los hilos que ahora están ordenados. Reduce al mínimo la longitud de
 los cables no trenzados ya que las secciones excesivamente largas ubicadas cerca de los conectores constituyen una fuente importante de ruido eléctrico.
 
-![Tema2](/PAX/assets/tema2_b.png)
+![Tema2](/PAX/assets/tema1/tema2_b.png)
