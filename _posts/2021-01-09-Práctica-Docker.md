@@ -65,3 +65,30 @@ En cada fase el algoritmo realiza:
 2. Se actualizan las etiquetas de distancia pasando por el nodo que se está tratando.
    
 ## Algoritmos de inundación
+
+El algoritmo de inundación (flooding) consiste en que cuando se recibe un mensaje se envía por todas las líneas menos por la que se ha recibido.
+
+El algoritmo es óptimo en número de saltos ya que incluyen todas las rutas posibles. Pero es ineficaz por la cantidad de mensajes que genera.
+
+Hay que tener cuidado con una red que tiene ciclos ya que los envíos no pararían nunca. Una solución es poner un contador a un valor igual o superior al diámetro de la red y decrementarlo en cada envío. Si llega un mensaje con el contador a 0 ya no se sigue propagando.
+
+Otra posibilidad es usar números de secuencia. Cuando se inicia una inundación se le añade un número de secuencia a los mensajes. Cuando se reenvía un mensaje, se anota el origen y el número de secuencia. Si se vuelve a recibir el mismo par origen, número de secuencia, ya no se sigue reenviando. Si cada origen usa números de secuencia consecutivos, para cada origen sería suficiente anotar la última difusión en la que se ha participado si todos los números anteriores ya han sido propagados.
+
+Una mejora es la **inundación selectiva**. En este caso los mensajes no se envían por todas las líneas sino por las que se tiene algún indicio de que van en la dirección apropiada (por ejemplo, por las que le llegan antes mensajes del destino).
+Dos características de este algoritmo son muy deseables: incluye las rutas óptimas y es muy fiable. Aunque caiga parte de la red, si el destino es alcanzable, le llegarán los mensajes.
+No se usa como método de encaminamiento aislado por su gran consumo de recursos, pero sí que forma parte de alguno de los pasos de otros algoritmos de encaminamiento.
+
+## Enrutamiento por vector distancia
+Se conoce también como **algoritmo de enrutamiento de Bellman-Ford**. 
+Es un algoritmo de encaminamiento dinámico que se usó inicialmente en **ARPANET**.
+
+Los pasos son los siguientes:
+1. Cada router descubre a sus vecinos directos y evalúa el coste del enlace. La distancia o coste podría ser simplemente el número de saltos, pero podrían ser otros valores. Por ejemplo, se podría estimar el retardo de un enlace enviando un ping y viendo lo que cuesta en responder (esto es la métrica utilizada). En este proceso los dos vecinos aprenden la dirección del otro.
+2. Se rellena una tabla con los destinos conocidos, la línea del siguiente salto para alcanzar ese destino y el coste estimado (inicialmente aparecerán los vecinos directos y el coste medido).
+3. Periódicamente se envían los vectores de distancias que contienen los destinos conocidos por el router y el coste estimado para llegar. Es un resumen de tabla de rutas.
+4. Cuando un router recibe los vectores de distancias de los vecinos:
+* Para cada destino que aparece en los vectores, calcula el mínimo del coste al vecino respectivo más la distancia que nos anuncia ese vecino.
+* Ese mínimo se incorpora a la tabla de rutas. 
+
+![Tema2](/PAX/assets/tema2_4.png) 
+
