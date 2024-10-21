@@ -2,11 +2,11 @@
 typora-copy-images-to: ../assets/img/docker/
 typora-root-url: ../../
 layout: post
-categories: Docker
-title: Práctica Docker
+categories: tema2 La capa de red
+title: Algoritmos de encaminamiento
 conToc: true
 author:
-- Víctor Ponz
+- Pedro Segarra
 lang: es
 titlepage: true
 titlepage-background: assets/img/despliegue.png
@@ -15,8 +15,8 @@ urlcolor: CornflowerBlue
 linkcolor: black
 toc-own-page: true
 toc-title: Contenidos
-header-left: UD 2. Docker
-header-right: Ciberseguridad
+header-left: 
+header-right: 
 footer-left: IES El Caminàs
 footer-right: \thepage/\pageref{LastPage}
 titlepage-rule-color: 1e2c37
