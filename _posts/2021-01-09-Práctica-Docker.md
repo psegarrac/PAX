@@ -103,11 +103,14 @@ La métrica con la que se miden la distancia a cada vecino podría calcularse en
 
 `````
 Un ejemplo es el protocolo **RIP** (Routing Information Protocol). La métrica usada en este protocolo es el número de saltos.
+
 `````
 Con una métrica pobre se puede liar mucho. 
+
 `````
 Imaginemos 3 routers (A, B y C). A-B y B-C conectados por 1Gbps ethernet y A-C conectados por una línea de 50Kbps. Para enviar mensajes de A a C RIP elegiría la línea directa (un salto) cuando es una decisión catastrófica porque es mejor enviar a través de B (dos saltos).
-````
+
+`````
 ### Problema de la cuenta hasta infinito
 
 Los protocolos de vector de distancia tienen un problema de convergencia. 
@@ -132,3 +135,27 @@ Los pasos de estos algoritmos son los siguientes:
     4. Difundir el mensaje con los vecinos.
     5. Con los mensajes que se recibe de los demás encaminadores se conoce la topología de la red. Cada nodo calcula su árbol sumidero (las mejores rutas a cada destino).
 Cada uno de los pasos anteriores tiene sus particularidades.
+
+### Descubrimiento de vecinos
+Se envía un mensaje de capa 2 por cada conexión que tenga un router. En ese mensaje de **hello** el router se identifica y espera respuesta. Con esto detecta a todos sus vecinos directos. Este descubrimiento se suele hacer periódicamente (por ejemplo cada 30 segundos) para detectar cambios en la red (nuevas conexiones, nuevos vecinos, o desapariciones).
+Un caso especial es cuando un router está conectado a la misma LAN que otros routers. En ese caso tendría varios vecinos en la misma conexión. Entonces se enviarían mensajes entre todos ellos (todas las combinaciones de pares). Una solución es considerar la LAN como un nodo ficticio como se muestra en la figura siguiente.
+
+![Tema2](/PAX/assets/tema2_6.png)
+
+Para tratar este problema, algunas implementaciones de este tipo de algoritmos eligen un router designado para que actúe como el nodo N de la figura. De esta forma los otros intercambian información con el router designado y no tienen que hacer todos los intercambios por pares.
+
+### Coste del enlace
+Lo deseable sería que el coste del enlace resultase de la combinación de una serie de factores y que además éstos se fuesen comprobando periódicamente. Por ejemplo:
+* Retardo. Se puede enviar un ping y ver lo que tarda en llegar la respuesta.
+* Ancho de banda. Se puede enviar una ráfaga de datos de forma intensa y estimar cuándo se empiezan a perder mensajes.
+* La carga de la línea. En este caso en la medición usando una especie de ping se incluiría los tiempos en colas del router. Cuanta más carga, pasará más tiempo encolado.
+* Fiabilidad. 
+
+Si la carga se tiene en cuenta en la **métrica** hay que tener en cuenta que no lleve a situaciones de **inestabilidad**. Esto puede ocurrir si de forma continuada se va cambiando dos posibles rutas. Cuando se elige una, luego aparecerá cargada. En la siguiente medición se cambia a la otra y así irán cambiando continuamente.
+
+En la realidad, muchas implementaciones no hace mediciones reales y utilizan métodos **administrativos**. Por ejemplo, en **OSPF** lo más común es usar como coste de un enlace a un valor inversamente proporcional del ancho de banda del dispositivo de red. Por ejemplo, se puede usa 108/ancho. Esto daría una valor 1 a una tarjeta fastehernet (100Mbps), y 0.1 a una Gbps. Pero estos valores no se extraen de una medición real.
+
+Hay algoritmos que pueden equilibrar tráfico entre varias rutas del mismo coste (para evitar la inestabilidad).
+
+### Mensajes de estado de enlace
+En los mensajes de estado de enlace se resume los vecinos de cada router y el coste que ha medido hasta ese vecino. En los mensajes se añaden campos con edad (para que caduquen) y número de secuencia para tener información actualizada y no verse afectado por las **inundaciones** que se hacen de estos mensajes. La edad se va decrementando en cada re-envío y cuando el valor sea cero los routers dejarían de difundirlo.
