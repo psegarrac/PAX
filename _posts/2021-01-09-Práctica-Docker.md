@@ -58,3 +58,10 @@ Características del árbol sumidero:
 Cuando se habla de **corta** se refiere a la de **menor coste**.
 Un algoritmo conocido para encontrar la ruta más corta entre un origen y cualquier destino es un grafo propuesto por Dijkstra.La evolución de este algoritmo se muestra en la figura siguiente:
 ![Tema2](/PAX/assets/tema2_3.png) 
+
+El funcionamiento del algoritmo de Dijstra es el siguiente. La primera figura (a) se muestran los pesos de los enlaces. El algoritmo actúa en iteraciones. Los nodos se etiquetan con el coste para llegar desde el origen a cada nodo Estas etiquetas pueden ser tentativas o definitivas (inicialmente el coste para llegar a cualquier nodo es infinito). En cada iteración se eligen el nodo con el menor coste tentativo, se pone como definitivo y se actualizan los costes de los vecinos de ese nodo.
+En cada fase el algoritmo realiza:
+1. Se elige el siguiente nodo a tratar. El que tenga menor peso o distancia y no esté etiquetado como definitivo (no tratado antes en el algortimo).
+2. Se actualizan las etiquetas de distancia pasando por el nodo que se está tratando.
+   
+## Algoritmos de inundación
