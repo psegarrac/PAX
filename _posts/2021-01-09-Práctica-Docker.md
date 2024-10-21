@@ -40,9 +40,9 @@ Por ello se distinguen varios algoritmos de encaminamiento:
 * **Encaminamiento estático**. El encaminador carga las rutas al arrancar o los algoritmos actúan de ifugal manera independientemente de cómo esté la red (estado).
 * **Encaminamiento dinámico**. En función del estado de la red, la carga y la topología, modifican las decisiones de encaminamiento. Para poder reaizar estas decisiones deben intercambiar información y comprobar el estado de la red. Se puede hacer periódicamente o cuando se detectan cambios.
   
-  ´´´´
+´´´´
   El objetivo de un algoritmo de encaminamiento es encontrar las mejores rutas a cada destino. El algoritmo debería aproximarse a una solución óptima.
-  ´´´´
+´´´
 ![Tema2](/PAX/assets/tema2_2.png) 
 
 En la figura anterior se muestra una red de encaminadores y un árblo que representa las mejores rutas del encaminador B a cada destino. Este árbol es el **arbol sumidero** (sink tree) para B.
