@@ -92,3 +92,19 @@ Los pasos son los siguientes:
 
 ![Tema2](/PAX/assets/tema2_4.png) 
 
+En la figura anterior se muestra un ejemplo. El router J recibe los vectores de distancia de sus vecinos (A, I, H, K). Las distancias respectivas medidas por J son 8, 10, 12 y 6. Ahora para los vectores que recibe, para cada destino suma la distancia del vecino con el coste que le promete ese vecino.
+Por ejemplo: para llegar a D, debe calcular el mínimo entre: 40+8=48, 27+10=37, 8+12=20 y 24+6=30. Decide que la mejor ruta es enviar el siguiente salto a H y el coste para llegar a ese destino es 20.
+
+La métrica con la que se miden la distancia a cada vecino podría calcularse en base a varios parámetros. Por ejemplo:
+* Retardo.
+* Carga que hay en esa línea. Por ejemplo incluyendo el tiempo en cola para la medición.
+* Ancho de banda.
+* Tasa de fallos.
+
+`````
+Un ejemplo es el protocolo **RIP** (Routing Information Protocol). La métrica usada en este protocolo es el número de saltos.
+
+Con una métrica pobre se puede liar mucho. 
+`````
+Imaginemos 3 routers (A, B y C). A-B y B-C conectados por 1Gbps ethernet y A-C conectados por una línea de 50Kbps. Para enviar mensajes de A a C RIP elegiría la línea directa (un salto) cuando es una decisión catastrófica porque es mejor enviar a través de B (dos saltos).
+```````
