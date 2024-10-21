@@ -159,3 +159,14 @@ Hay algoritmos que pueden equilibrar tráfico entre varias rutas del mismo coste
 
 ### Mensajes de estado de enlace
 En los mensajes de estado de enlace se resume los vecinos de cada router y el coste que ha medido hasta ese vecino. En los mensajes se añaden campos con edad (para que caduquen) y número de secuencia para tener información actualizada y no verse afectado por las **inundaciones** que se hacen de estos mensajes. La edad se va decrementando en cada re-envío y cuando el valor sea cero los routers dejarían de difundirlo.
+
+![Tema2](/PAX/assets/tema2_7.png)
+
+La construcción y envío de los mensajes de estado se puede hacer periódicamente o cuando un router ha detectado algún cambio en la red (en algún vecino, en algún enlace). Si hay cambios en la red y se envían estos mensajes, todos los routers revisarán la configuración de sus rutas.
+
+### Inundación de los mensajes de estado de enlace
+
+### Cálculo de rutas
+
+## Enrutamiento jerárquico
+
