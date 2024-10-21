@@ -108,3 +108,27 @@ Con una métrica pobre se puede liar mucho.
 `````
 Imaginemos 3 routers (A, B y C). A-B y B-C conectados por 1Gbps ethernet y A-C conectados por una línea de 50Kbps. Para enviar mensajes de A a C RIP elegiría la línea directa (un salto) cuando es una decisión catastrófica porque es mejor enviar a través de B (dos saltos).
 ````
+### Problema de la cuenta hasta infinito
+
+Los protocolos de vector de distancia tienen un problema de convergencia. 
+Por **convergencia** se entiende que si una red no sufre cambios, el algoritmo debería tender (converger) a la solución óptima. Cuanto más se aproxime a la solución óptima y lo haga en menor tiempo, mejor es el algoritmo.
+
+![Tema2](/PAX/assets/tema2_5.png)
+
+En la figura anterior se muestra este defecto. En la parte (a) se añade un nuevo router, A, y después de 4 intercambios de vectores de distancia, los cuatro routers (B, C, D y E) aprenden su presencia y el coste para llegar. El algoritmo ha funcionado bien.
+En cambio si el cambio es al revés (se cae el enlace hacia A y este router ya no es alcanzable), resulta que al intercambiarse vectores de distancia, los routers creen que pueden llegar a A y van engañándose unos a otros aumentando cada vez la distancia. Es decir que ante este cambio, el algoritmo diverge.
+El algoritmo pararía al alcanzar un concepto de infinito. Por ejemplo sobrepasar el diámetro conocido de la red. Pero tarda en darse cuenta. 
+Se han propuesto algunas soluciones a este problema para mejorar el tiempo de reacción pero ninguna es óptima para todos los casos.
+
+## Enrutamiento por estado de enlace
+Es la otra gran familia de protocolos de encaminamiento dentro de sistemas autónomos. Los sistemas autónomos, vienen a ser redes de empresas o instituciones que tienen bloques de direcciones asignadas y buscan las mejores rutas dentro de su red.
+En gran medida estos algoritmos sustituyeron en Internet a los de vector de distancia por el problema de la cuenta a infinito que éstos sufren, pero se siguen usando protocolos de los dos tipos porque para redes de pequeño tamaño los protocolos de vector de distancia son más fáciles de configurar.
+Ejemplos de protocolos de estado de enlace: OSPF (Open Short Path First) e IS-IS (Intermediate System - Intermediate System).
+Para decidir cambios de rutas, los dos tipos de algoritmos, de vector de distancia o de estado de enlace, podrían trabajar periódicamente o en los momentos en los que se detectan cambios en la red. En cambio, los primeros suelen enviar los vectores de distancia periódicamente, mientras que los segundos suelen reaccionar cuando detectan cambios en la red.
+Los pasos de estos algoritmos son los siguientes:
+    1. Descubrir los vecinos directos.
+    2. Medir el coste para cada uno de los vecinos.
+    3. Construir un mensaje que indique los vecinos y los costes.
+    4. Difundir el mensaje con los vecinos.
+    5. Con los mensajes que se recibe de los demás encaminadores se conoce la topología de la red. Cada nodo calcula su árbol sumidero (las mejores rutas a cada destino).
+Cada uno de los pasos anteriores tiene sus particularidades.
