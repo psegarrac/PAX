@@ -103,8 +103,8 @@ La métrica con la que se miden la distancia a cada vecino podría calcularse en
 
 `````
 Un ejemplo es el protocolo **RIP** (Routing Information Protocol). La métrica usada en este protocolo es el número de saltos.
-
+`````
 Con una métrica pobre se puede liar mucho. 
 `````
 Imaginemos 3 routers (A, B y C). A-B y B-C conectados por 1Gbps ethernet y A-C conectados por una línea de 50Kbps. Para enviar mensajes de A a C RIP elegiría la línea directa (un salto) cuando es una decisión catastrófica porque es mejor enviar a través de B (dos saltos).
-```````
+````
