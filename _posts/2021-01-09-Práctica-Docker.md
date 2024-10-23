@@ -30,7 +30,7 @@ pandoc-latex-environment:
     cautionblock: [caution]
     importantblock: [important]
 ---
-# Algoritmos de encaminamiento
+# 2 Algoritmos de encaminamiento
 
 El encaminamiento de mensajes consta de dos partes:
 * Construir y mantener la **tabla de rutas**. La tabla de rutas indica la línea o siguiente salto para alcanzar un destino. Este proceso puede er complejo y dinámico ya que se deben tener en cuenta las modificaciones en la red (averías, carga en las líneas, nuevas incorporaciones de oruteres y líneas, nuevos destinos). Los **algoritmos de encaminamiento** o protocolos de encaminamiento se realizan en esta parte.
@@ -54,7 +54,7 @@ Características del árbol sumidero:
 * Las subrutas son óptimas también. Si la mejor ruta de B a L pasa por F, esta ruta también incluye la mejor de F a L. Se conoce como **principio de optimalidad**
 * Pueden existir varias rutas óptimas.
 
-## La ruta más corta
+## 2.1 La ruta más corta
 Cuando se habla de **corta** se refiere a la de **menor coste**.
 Un algoritmo conocido para encontrar la ruta más corta entre un origen y cualquier destino es un grafo propuesto por Dijkstra.La evolución de este algoritmo se muestra en la figura siguiente:
 ![Tema2](/PAX/assets/tema2_3.png) 
@@ -64,7 +64,7 @@ En cada fase el algoritmo realiza:
 1. Se elige el siguiente nodo a tratar. El que tenga menor peso o distancia y no esté etiquetado como definitivo (no tratado antes en el algortimo).
 2. Se actualizan las etiquetas de distancia pasando por el nodo que se está tratando.
    
-## Algoritmos de inundación
+## 2.2 Algoritmos de inundación
 
 El algoritmo de inundación (flooding) consiste en que cuando se recibe un mensaje se envía por todas las líneas menos por la que se ha recibido.
 
@@ -78,7 +78,7 @@ Una mejora es la **inundación selectiva**. En este caso los mensajes no se env�
 Dos características de este algoritmo son muy deseables: incluye las rutas óptimas y es muy fiable. Aunque caiga parte de la red, si el destino es alcanzable, le llegarán los mensajes.
 No se usa como método de encaminamiento aislado por su gran consumo de recursos, pero sí que forma parte de alguno de los pasos de otros algoritmos de encaminamiento.
 
-## Enrutamiento por vector distancia
+## 2.3 Enrutamiento por vector distancia
 Se conoce también como **algoritmo de enrutamiento de Bellman-Ford**. 
 Es un algoritmo de encaminamiento dinámico que se usó inicialmente en **ARPANET**.
 
@@ -111,7 +111,7 @@ Con una métrica pobre se puede liar mucho.
 Imaginemos 3 routers (A, B y C). A-B y B-C conectados por 1Gbps ethernet y A-C conectados por una línea de 50Kbps. Para enviar mensajes de A a C RIP elegiría la línea directa (un salto) cuando es una decisión catastrófica porque es mejor enviar a través de B (dos saltos).
 
 `````
-### Problema de la cuenta hasta infinito
+### 2.3.1 Problema de la cuenta hasta infinito
 
 Los protocolos de vector de distancia tienen un problema de convergencia. 
 Por **convergencia** se entiende que si una red no sufre cambios, el algoritmo debería tender (converger) a la solución óptima. Cuanto más se aproxime a la solución óptima y lo haga en menor tiempo, mejor es el algoritmo.
@@ -123,7 +123,7 @@ En cambio si el cambio es al revés (se cae el enlace hacia A y este router ya n
 El algoritmo pararía al alcanzar un concepto de infinito. Por ejemplo sobrepasar el diámetro conocido de la red. Pero tarda en darse cuenta. 
 Se han propuesto algunas soluciones a este problema para mejorar el tiempo de reacción pero ninguna es óptima para todos los casos.
 
-## Enrutamiento por estado de enlace
+## 2.4 Enrutamiento por estado de enlace
 Es la otra gran familia de protocolos de encaminamiento dentro de sistemas autónomos. Los sistemas autónomos, vienen a ser redes de empresas o instituciones que tienen bloques de direcciones asignadas y buscan las mejores rutas dentro de su red.
 En gran medida estos algoritmos sustituyeron en Internet a los de vector de distancia por el problema de la cuenta a infinito que éstos sufren, pero se siguen usando protocolos de los dos tipos porque para redes de pequeño tamaño los protocolos de vector de distancia son más fáciles de configurar.
 Ejemplos de protocolos de estado de enlace: OSPF (Open Short Path First) e IS-IS (Intermediate System - Intermediate System).
@@ -136,7 +136,7 @@ Los pasos de estos algoritmos son los siguientes:
     5. Con los mensajes que se recibe de los demás encaminadores se conoce la topología de la red. Cada nodo calcula su árbol sumidero (las mejores rutas a cada destino).
 Cada uno de los pasos anteriores tiene sus particularidades.
 
-### Descubrimiento de vecinos
+### 2.4.1 Descubrimiento de vecinos
 Se envía un mensaje de capa 2 por cada conexión que tenga un router. En ese mensaje de **hello** el router se identifica y espera respuesta. Con esto detecta a todos sus vecinos directos. Este descubrimiento se suele hacer periódicamente (por ejemplo cada 30 segundos) para detectar cambios en la red (nuevas conexiones, nuevos vecinos, o desapariciones).
 Un caso especial es cuando un router está conectado a la misma LAN que otros routers. En ese caso tendría varios vecinos en la misma conexión. Entonces se enviarían mensajes entre todos ellos (todas las combinaciones de pares). Una solución es considerar la LAN como un nodo ficticio como se muestra en la figura siguiente.
 
@@ -144,7 +144,7 @@ Un caso especial es cuando un router está conectado a la misma LAN que otros ro
 
 Para tratar este problema, algunas implementaciones de este tipo de algoritmos eligen un router designado para que actúe como el nodo N de la figura. De esta forma los otros intercambian información con el router designado y no tienen que hacer todos los intercambios por pares.
 
-### Coste del enlace
+### 2.4.2 Coste del enlace
 Lo deseable sería que el coste del enlace resultase de la combinación de una serie de factores y que además éstos se fuesen comprobando periódicamente. Por ejemplo:
 * Retardo. Se puede enviar un ping y ver lo que tarda en llegar la respuesta.
 * Ancho de banda. Se puede enviar una ráfaga de datos de forma intensa y estimar cuándo se empiezan a perder mensajes.
@@ -157,16 +157,42 @@ En la realidad, muchas implementaciones no hace mediciones reales y utilizan mé
 
 Hay algoritmos que pueden equilibrar tráfico entre varias rutas del mismo coste (para evitar la inestabilidad).
 
-### Mensajes de estado de enlace
+### 2.4.3 Mensajes de estado de enlace
 En los mensajes de estado de enlace se resume los vecinos de cada router y el coste que ha medido hasta ese vecino. En los mensajes se añaden campos con edad (para que caduquen) y número de secuencia para tener información actualizada y no verse afectado por las **inundaciones** que se hacen de estos mensajes. La edad se va decrementando en cada re-envío y cuando el valor sea cero los routers dejarían de difundirlo.
 
 ![Tema2](/PAX/assets/tema2_7.png)
 
 La construcción y envío de los mensajes de estado se puede hacer periódicamente o cuando un router ha detectado algún cambio en la red (en algún vecino, en algún enlace). Si hay cambios en la red y se envían estos mensajes, todos los routers revisarán la configuración de sus rutas.
 
-### Inundación de los mensajes de estado de enlace
+### 2.4.4 Inundación de los mensajes de estado de enlace
+Los mensajes se envían para hacer una inundación, ya que esta información debe llegar a todos los routers. Se pone un número de secuencia y edad o marca de tiempo para limitar los envíos.
+Los receptores mantienen una tabla con el origen del mensaje, número de secuencia y la edad. Si de un mismo origen recibe un número de secuencia menor, lo descarta porque tiene información más reciente. Si es un mensaje nuevo, lo envía por todas las líneas menos por la que lo ha recibido.
+Además los mensajes llevan una marca de tiempo que se decrementa en cada envío para que las difusiones tengan fin.
+En el tratamiento de los mensajes los routers también etiquetan el tiempo de la información de los mensajes para que caduque y así no mantener información muy desfasada. Por ejemplo, si se usan 32 bits para el número de secuencia y un router se reinicia y empieza otra vez desde cero, los otros routers podrían estar años sin tratar esos mensajes por considerarlos desfasados. Al caducar la información que se tenía en unas decenas de segundos, se volverían a aceptar nuevos mensajes.
+![Tema2](/PAX/assets/tema2_8.png)
 
-### Cálculo de rutas
 
-## Enrutamiento jerárquico
 
+
+En la figura anterior se describe la estructura de datos usada por el encaminador B. Cada fila aquí corresponde a un mensaje de estado de enlaces recién llegado, pero aun no procesado por completo. La tabla registra dónde se originó el mensaje, su número de secuencia y edad, así como los datos. Además, hay banderas o indicadores de transmisión y de confirmación de recepción para cada una de las tres líneas. En la tabla el paquete de estado del enlace de A llegó directamente, por lo que debe enviarse a C y F, debe confirmarse la recepción a A. Lo mismo sucede con F. Sin embargo, la situación del tercer paquete en E es diferente. Llego dos veces a través de EAB y la segunda por medio de EFB. En consecuencia, ese paquete tiene que enviarse sólo a C, pero debe confirmarse su recepción tanto a A como a F.
+Mientras se van difundiendo los mensajes de estado de enlace los routers tiene diferente visión de la red y se pueden producir periodos de inestabilidad si recalculan sus rutas en diferentes momentos. Es normal que esperen un poco antes de recalcular para disminuir este efecto porque pueden llegar más cambios en poco tiempo.
+
+### 2.4.5 Cálculo de rutas
+on los mensajes de estado de enlace se puede construir el diagrama de la red (la topología) y aplicar un algoritmo como el de Dijkstra para encontrar las rutas más cortas a cada destino.
+Nótese que para un enlace se tiene la información de cada sentido (como dos enlaces unidireccionales). En cada sentido el coste puede ser diferente. Esto puede que hacer que la ruta entre dos routers sea diferente en un sentido y otro.
+
+La construcción del árbol con las mejores rutas es costoso computacionalmente. Nodos o enlaces inestables en la red pueden provocar continuas reconfiguraciones y avalanchas de mensajes de estado que degradarán las prestaciones de la red.
+
+## 2.5 Enrutamiento jerárquico
+En redes grandes conocer todos los destinos es costoso, tanto para mantener las rutas como para consultar la tabla de encaminamiento para enviar mensajes.
+Una forma de reducir esto es dividir la red en áreas o regiones. De esta forma, para enviar a destinos de otra región, un router solo conoce cómo llegar a la región; no necesita conocer todos los destinos dentro de esa región. Un símil es el sistema de numeración de telefonía fija.
+Si es necesario, la red se puede dividir en más de un nivel.
+
+![Tema2](/PAX/assets/tema2_9.png)
+
+En la figura anterior se muestra un ejemplo en el que se usan todos los destinos o se usa encaminamiento jerárquico. En la tabla de encaminamiento jerárquico, el router 1A conoce todos los destinos de su región, pero para las otras regiones solamente mantiene una ruta.
+Al usar encaminamiento jerárquico puede que no siempre se usen rutas óptimas (por ejemplo de 1A a 5C), pero las ventajas suelen compensar esta pérdida.
+
+En el protocolo IP se pueden resumir o sumarizar rutas que tienen un prefijo de red común. Esto permite aprovechar el encaminamiento jerárquico si el tráfico para un prefijo se envía por la misma salida. Las asignaciones de bloques de direcciones IP se reparten por regiones para aprovechar esta característica.
+
+Protocolos de encaminamiento como OSPF permiten el encaminamiento jerárquico definiendo áreas de redes interconectadas.
