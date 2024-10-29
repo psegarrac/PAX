@@ -120,3 +120,11 @@ Luego en la capa 2 igual hay que enviar a otro router (gateway) para encaminar h
 ``````
 En una tabla de rutas puede que más de una línea de la tabla que acierte. Se usará la que tenga una máscara con más unos (la más específica o con un prefijo mayor).
 ``````
+
+En la figura siguiente se muestra un ejemplo de asignaciones de direcciones. Se supone un prefijo de red 194.24.0.0 a partir del cual se piden redes que hay que ir asignando por orden de llegada. Cambridge (2048 direcciones), Edimburgo (1024 direcciones) y Oxford (4096 direcciones). 
+
+![Tema2](/PAX/assets/tema2_r3.png)
+
+En la figura anterior, el bloque marcado como disponible es porque la red de Oxford no cabría con todas sus direcciones. En cambio se debe marcar para asignarlo a otras redes que se soliciten y quepan completamente dentro de él.
+
+>Hay que tener en cuenta que si se pide una cantidad de direcciones siempre se debe asignar una potencia de 2 igual o superior porque las redes deben caber enteras con un prefijo y una máscara de red
