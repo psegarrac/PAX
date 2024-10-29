@@ -95,7 +95,7 @@ Por ejemplo, en una universidad es común tener una red IP para cada departament
 ![Tema2](/PAX/assets/tema2_r2.png)
 
 Para una red dividirla en subredes (redes IP más pequeñas pero contenidas en la red inicial), lo que se hace es pasar algunos bits (dependiendo de las subredes que se necesiten) de la parte de ordenador a la parte de red. La cantidad de bits usados deben también añadirse a la máscara.
-La figura siguiente muestra lo que era una red de clase B (actualmente con máscara de 16 bits) dividida en 26 subredes (se han usado 6 bits de la parte de ordenador para diferenciar cada subred). Dentro de esa red, ahora se usará una máscara 255.255.252.0 y cada subred puede tener hasta 210 direcciones.
+La figura anterior muestra lo que era una red de clase B (actualmente con máscara de 16 bits) dividida en 26 subredes (se han usado 6 bits de la parte de ordenador para diferenciar cada subred). Dentro de esa red, ahora se usará una máscara 255.255.252.0 y cada subred puede tener hasta 210 direcciones.
 
 >
 >Se puede usar dos notaciones para indicar la máscara:
@@ -109,7 +109,7 @@ La figura siguiente muestra lo que era una red de clase B (actualmente con másc
 
 
 #### 5.1.2 CIDR
-Classless InterDomain Routing. Como ya se ha mencionado, el direccionamiento por clases ya no se usa. Además se ha introducido el concepto de máscara de red para poder subdividir redes. El uso de la máscara para indicar el prefijo de red en la dirección ha sido imprescindible por el uso que se estaba haciendo de las asignaciones de redes. Cuando se asignaban direcciones, los solicitantes no querían de clase C (255 direcciones) y solicitaban al menos de clase B (65.536 direcciones). Como se agotan las direcciones disponibles rápidamente, se empezó a hacer las asignaciones adaptando la máscara de red a algo aproximado a las direcciones solicitadas. De esta forma se aprovecha más las direcciones.
+**Classless InterDomain Routing**. Como ya se ha mencionado, el direccionamiento por clases ya no se usa. Además se ha introducido el concepto de máscara de red para poder subdividir redes. El uso de la máscara para indicar el prefijo de red en la dirección ha sido imprescindible por el uso que se estaba haciendo de las asignaciones de redes. Cuando se asignaban direcciones, los solicitantes no querían de clase C (255 direcciones) y solicitaban al menos de clase B (65.536 direcciones). Como se agotan las direcciones disponibles rápidamente, se empezó a hacer las asignaciones adaptando la máscara de red a algo aproximado a las direcciones solicitadas. De esta forma se aprovecha más las direcciones.
 A partir del uso de CIDR es necesario conocer la máscara de cualquier dirección IP para direccionarla. El proceso de reenvío es un poco más complicado porque hay que comprobar cada destino con la máscara de cada dirección de la tabla de rutas hasta encontrar por dónde se debe enviar el mensaje. 
 
 >
