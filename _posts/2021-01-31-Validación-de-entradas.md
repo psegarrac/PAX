@@ -66,7 +66,7 @@ Por otro lado se eliminó el campo de suma de verificación de la cabecera ya qu
 
 La siguiente figura muestra algunas de las cabeceras opcionales que se han definido.
 
-![Tema2](/PAX/assets/tema2_r6.png)
+![Tema2](/PAX/assets/tema2_r8.png)
 
 Hay cabeceras opcionales de tamaño fijo o de tamaño variable, las cuales pueden tener a su vez varias opciones o partes. Cada parte de una cabecera opcional de tamaño variable se codifica como una tupla: **tipo**, **longitud** y **valor**:
 * Tipo. 1 byte indicando el tipo de esa opción. Los identificativos de tipo se seleccionan de forma que los dos primeros bits indican qué deben hacer los routers que no conocen esa opción:

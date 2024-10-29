@@ -2,7 +2,7 @@
 typora-copy-images-to: ../assets/img/autenticacion/
 typora-root-url: ../../
 layout: post
-categories: tema 2
+categories: tema2 La capa de red
 title: ICMP Protocolo de mensaje de control en internet
 conToc: true
 author:
