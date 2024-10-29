@@ -99,8 +99,8 @@ La figura siguiente muestra lo que era una red de clase B (actualmente con másc
 
 >
 >Se puede usar dos notaciones para indicar la máscara:
- >   • Una notación como para la IP, pasando cada byte a decimal: 255.255.252.0
- >   • Simplemente indicando el número de unos de la máscara (que han de ser los de mayor peso): /22
+ >   * Una notación como para la IP, pasando cada byte a decimal: 255.255.252.0
+ >   * Simplemente indicando el número de unos de la máscara (que han de ser los de mayor peso): /22
 >
 
 >
