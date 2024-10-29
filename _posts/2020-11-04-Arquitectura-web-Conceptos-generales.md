@@ -27,10 +27,10 @@ El medio de transmisión es el camino físico entre el emisor y el receptor. En 
 * **Interferencias**: la presencia de señales con frecuencias próximas pueden distorsionar o destruir la señal. Las interferencias son especialmente relevantes en medios no guiados como las transmisiones inalámbricas, pero también puede producirse en medios guiados.
 * **Número de receptores**: un medio guiado se puede usar tanto para un enlace punto a punto como para un enlace compartido, mediante el uso de múltiples conectores. En este último caso, cada uno de los conectores utilizados puede atenuar y distorsionar la señal, por lo que la distancia y/o velocidad de transmisión disminuyen. En medios guiados está en desuso conectar varios receptores a un medio salvo el caso puentes ópticos pasivos que pueden usarse en fibra óptica.
   
-### Medios de transmisión guiados
+### 1.1 Medios de transmisión guiados
 En este caso la capacidad de transmisión en términos de velocidad o ancho de banda depende de la distancia.
 
-#### Par trenzado de cables de cobre
+#### 1.1.1 Par trenzado de cables de cobre
 Son pares de cables de cobre. Cada cable está aislado con una funda aislante y entrecruzados en forma de espiral. Así se reducen las inducciones.
 Cada par constituye sólo un enlace de comunicación. La señal se codifica como diferencias de voltaje entre los dos cables. El uso del trenzado tiende a reducir las interferencias electromagnéticas (diafonía). Los pares adyacentes se trenzan con paso de torsión diferentes. Los conductores que forman el par tienen un grosor entre 0.04 y 0.09 pulgadas.
 
@@ -75,7 +75,7 @@ Los cables de categoría 7 llevan apantallamiento para cada par y un apantallami
 
 Hasta tasas de 100Mbps se puede usar cables de categoría 5 y solo se usan 2 de los 4 pares que contienen. Para tasas mayores se usan los 4 pares de cables.
 
-#### Cable Coaxial
+#### 1.1.2 Cable Coaxial
 
 Consiste en un conductor cilíndrico externo que rodea un cable conductor. El conductor interior se mantiene a lo largo del eje axial mediante una serie de anillos aislantes o mediante un sólido dieléctrico. El conductor exterior se cubre con una funda protectora. El diametro va desde 1 a 2.5 centímetros. Es menos susceptible a interferencias y diafonías que el par trenzado. Cubre mayores distancias. 
 
@@ -85,12 +85,12 @@ Se usa el coaxial para:
 * Distribución de televisión.
 Y tanto para transmitir señales analógicas como digitales. Ahora está llegando la conexión de fibra óptica alas casas y a veces se usa el coaxial entre la fibra y las viviendas.
 
-#### Líneas eléctricas
+#### 1.1.3 Líneas eléctricas
 Las líneas eléctricas pueden usarse como medio de transmisión además de proporcionar potencia eléctrica. Se pueden usar como redes metropolitanas en la red eléctrica o como redes de área local dentro de las casas. Se puede reaprovechar la infraestructura disponible. Su funcionamiento es usando una portadora sobre la que se modula la señal.
 
 En las casas se puede usar como LAN pero el problema viene porque la instalación no está pensada para transmisión de datos y puede sufrir mucho ruido. En las casas puede llegar a tasas de 100Mbps. Hay dispositivos económicos que se conectan a los enfuches de la casa y proporcionan una salida de cable UTP para conectar ordenadores o dispositivos de red. Estos conversores reciben el nombre de **PLC** (Power Line Communication).
 
-#### Fibra Óptica
+#### 1.1.4 Fibra Óptica
 Es un medio flexible y fino capaz de conducir energía de naturaleza óptica. Su diámetro varía entre 2 y 125 micrómetros. Se puede construir con diversos tipos de vidreos y plásticos. El mejor material está hecho de fibras de silicio fundido ultra puro. Sin embargo, las fibras de cristal tienen mayores pérdidas, pero son más baratas. Las fibras de plástico tienen mayores pérdidas y menor coste, pro consigue distancias aceptables para distancias cortas (hasta 500 metros).
 
 El principio de funcionamiento de la fibra óptica ensiste en ángulos de emisión de luz que se refleja internamente en la fibra (no existe refracción).
@@ -104,19 +104,19 @@ En una manguera de fibra puede ir varias grupos de fibras. Por ejemplo 8 grupos 
 
 Es muy utilizada en las telecomunicaciones a larga distancia. Su costo es progresivamente menor y su continuo perfeccionamiento la hacen apropiada para entornos LAN (redes de área local). Las principales ventajas respecto del coaxial y par trenzado son:
 * Mayor ancho de banda. De hecho actualmente el límite de tasa de envío se produce por la conversión de luz a señal eléctrica, no por ocupar el ancho de banda el medio.
-*Menor tamaño y peso: la reducción de tamaño y peso para capacidades comparables es de 10 a 1.
-*Atenuación menor: la atenuación es menor y constante en un gran intervalo de frecuencias.
-*Aislamiento electromagnético: la fibra óptica no se ve afectada por los campos electromagnéticos exteriores. No es vulnerable a interferencias, ruido impulsivo ni diafonía, lo cual es una ventaja en entornos industriales.
-*Mayor separación entre los repetidores: significa menor costo y menos fuentes de error. Se han conseguido 3.5 Gbps en distancias de 318 Kilómetros sin repetidores.
-*El precio actualmente es atractivo frente al cobre.
+* Menor tamaño y peso: la reducción de tamaño y peso para capacidades comparables es de 10 a 1.
+* Atenuación menor: la atenuación es menor y constante en un gran intervalo de frecuencias.
+* Aislamiento electromagnético: la fibra óptica no se ve afectada por los campos electromagnéticos exteriores. No es vulnerable a interferencias, ruido impulsivo ni diafonía, lo cual es una ventaja en entornos industriales.
+* Mayor separación entre los repetidores: significa menor costo y menos fuentes de error. Se han conseguido 3.5 Gbps en distancias de 318 Kilómetros sin repetidores.
+* El precio actualmente es atractivo frente al cobre.
 
 Se utiliza para transmisiones de larga distancia y metropolitanas. Acceso a zonas rurales, LAN, etc. En telefonía de larga distancia los enlaces troncales tienen distancias medias de 1500 kilómetros, con capacidades de entre 20000 y 60000 canales de voz.
 La tendencia es sustituir el bucle de abonado de par trenzado de cobre por fibra óptica hasta el hogar (FTTH, Fiber To The Home). Una familia de tecnologías para hacer estas conexiones es PON (Passive Optica Network), siendo GPON la que se está aplicando actualmente. 
 La idea de PON es que con tecnologías pasivas (no tienen elementos activos, ni con lógica ni amplificadores u otros elementos electrónicos) conectan muchas viviendas o edificios a una fibra de salida. Esto se consigue con splitters o puentes ópticos. 
 Con GPON los únicos elementos activos están en la centralita, el OLT (Optical Line Termination) y en la vivienda (o edificio si FTTB), que es el ONT (Optical Network Termination). Del OLT sale una fibra que puede ser dividida una primera vez hasta en 128 fibras y cada una de las 128 una segunda vez en 64 fibras. Saldrían 128×64=8192 viviendas a partir de una sola fibra de la centralita.
 El OLT debe indentificar los ONT que tiene conectados para aplicar una multiplexación por división de tiempo y un cifrado porque todos los ONT reciben las comunicaciones de todos los demás. Se suele usar con una única fibra por ONT o vivienda y se usan frecuencias diferentes para subida y bajada de datos. De un OLT a un ONT solo se puede pasar por 2 puentes o splitters. Para dar una idea de distancias, se pueden alcanzar hasta 60km entre la centralita y la vivienda, pero normalmente esta distancia se suele limitar a una veintena de km. En todo caso hay que llevar un control de las distancias, soldaduras de fibra y fibras por puente para asegurarse de que a todos los ONT llega suficiente potencia de la señal.
-### Medios de transmisión no guiados
-#### Transmisión inalámbrica
+### 1.2 Medios de transmisión no guiados
+#### 1.2.1Transmisión inalámbrica
 En la transmisión inalámbrica, emisión y recepción se efectúa mediante antenas. En la emisión se radia energía electromagnética en el medio (generalmente aire). En la recepción se captan las ondas electromagnéticas del medio que rodea a la antena.
 
 ![Tema1](/PAX/assets/img/tema1/Tema1_10.png)
@@ -131,14 +131,14 @@ Es más sencillo confinar la energía en un haz direccional cuanto mayor es la f
 * 
 *Ondas de radio: comprende de los 30 MHz a 1 GHz. Son adecuadas para aplicaciones omnidireccionales. Cubren la banda VHF y parte de la banda UHF.
 
-*Infrarrojos: comprende de los 3 x 1011 a los 2 x 1014 Hz. Son útiles para conexiones locales punto a punto o para multipunto en áreas muy limitadas. No atraviesan obstáculos por eso se usan en los telemandos y detección de presencia para alarmas.
+* Infrarrojos: comprende de los 3 x 1011 a los 2 x 1014 Hz. Son útiles para conexiones locales punto a punto o para multipunto en áreas muy limitadas. No atraviesan obstáculos por eso se usan en los telemandos y detección de presencia para alarmas.
 
-*Microondas por satélite: un satélite de comunicaciones es básicamente una estación que retransmite microondas. Se utiliza como enlace entre dos o más receptores/transmisores terrestres llamados estaciones base. El modo de funcionamiento es el siguiente:
+* Microondas por satélite: un satélite de comunicaciones es básicamente una estación que retransmite microondas. Se utiliza como enlace entre dos o más receptores/transmisores terrestres llamados estaciones base. El modo de funcionamiento es el siguiente:
   El satélite recibe la señal de una banda de frecuencia llamada canal ascendente. La señal es amplificada o repetida a otra banda de frecuencia llamada canal descendente.
   Cada satélite operará en ciertas bandas de frecuencias llamadas transponders.
   Las configuraciones posibles son: punto a punto entre dos antenas terrestres. Enlace de difusión entre una estación base terrestre transmisora y un conjunto de receptores terrestres.
 
-## Red Telefónica
+## 2 Red Telefónica
 La red telefónica pública conmutada fue diseñada hace años con el propósito de transmitir voz. Su aplicabilidad en las comunicaciones entre ordenadores es limitada, aunque esta situación ha cambiado gracias a las troncales de fibra óptica entre las centralitas y la tecnología digital. Para ver las diferencias con una red local, un cable entre dos computadoras puede transferir a 109 bps, mientras que una línea de acceso telefónico tiene una tasa máxima de 56 kbps, con lo que es casi 20000 veces más lento. En el caso de establecer una conexión ADSL, sigue habiendo una diferencia de un factor de 1000 a 2000 veces.
 
 el sistema telefónico consiste en tres componentes principales:
@@ -148,13 +148,13 @@ el sistema telefónico consiste en tres componentes principales:
 
 >Los circuitos locales son los que llegan a las casas de los usuarios finales. Son la parte más débil del sistema. En el caso de la comunicación a través de troncales, la principal consideración es cómo reunir múltiples llamadas y enviarlas juntas por la misma fibra. Esta operación se llama multiplexión y existen diversas formas de hacerlo. El sistema es jerárquico de forma que para conectar dos usuarios que quieren hablar, se sube en la jerarquía y se baja hasta conectar con el otro extremo.
 
-### Circuito local: modems, ADSL
+### 2.1 Circuito local: modems, ADSL
 
 Al circuito local también se le llama **última milla o bucle de abonado**.
 Durante más de 100 años la comunicación en circuitos locales se ha realizado mediante señalización analógica. Así cuando una computadora desea enviar datos digitales sobre una línea analógica de acceso telefónico, es necesario convertir primero los datos a formato analógico para transmitirlos sobre un circuito local. Un dispositivo conocido como módem realiza esta conversión. Cuando los datos llegan a la oficina central de la compañía telefónica, los datos se convierten a formato digital para transmitirlos sobre las troncales a largas distancias. 
 Al codificar información digital en un medio físico (la modulación), hay dos maneras de hacerlo. En **banda base** la señal se codifica directamente, usando desde la frecuencia cero a la frecuencia que sea adecuada. El ejemplo más simple es que con un voltaje 0 se envía un bit 0 y con un voltaje 1 se envía un bit 1. Este modo de transmisión suele usarse en cables. Otra manera, que vamos a ver como ejemplo se llama transmisión **pasabanda**. En este caso se modifican características de una señal periódica portadora, la cual ya tiene una frecuencia, para codificar información. Usando portadoras a diferentes frecuencias se puede multiplexar diferentes comunicaciones sobre el mismo medio físico. Suele usarse en comunicaciones inalámbricas y ópticas.
 
-#### Módems
+#### 2.1.1 Módems
 En el bucle de abonado se usa codificación pasabanda porque se adapta mejor a líneas largas, algunos kms, de par trenzado de cobre. Si se usase una onda cuadrada en codificación en banda base se necesitaría muchos armónicos, y al alargar el cable se reduce mucho el ancho de banda.
 Veamos algunos ejemplos de modulación pasabanda. Lo que se hace es, sobre una señal periódica sinusoidal (como la de la corriente alterna, por ejemplo) a la que llamamos **portadora de onda sinusoidal**, aplicar modificaciones de su amplitud, frecuencia o fase para codificar bits.
 Ejemplos de estas modificaciones:
@@ -165,7 +165,7 @@ Ejemplos de estas modificaciones:
 
 Todos los módems modernos transmiten tráfico en ambas direcciones al mismo tiempo. La conexión que permite el flujo de tráfico en ambas direcciones de manera simultánea se conoce como **dúplex total**. La conexión que permite el tráfico en ambas direcciones, pero sólo un sentido a la vez, se denomina **semidúplex**. Por último, un conexión que permite el tráfico en un sólo sentido se conoce como **simplex**.
 
-#### ADSL
+#### 2.1.2 ADSL
 
 Los 56 kbps que ofrecen los módems sobre un canal de voz de 3000Hz es insuficiente, especialmente para competir con otro tipo de redes como la televisión por cable. Una de las soluciones sobre la red de telefonía fue el ADSL (Línea de suscriptor digital asimétrica).
 La primera versión de ADSL funcionaba dividiendo el espectro disponible en el circuito local, de alrededor de 1.1 MHz, en tres bandas de frecuencia: POTS, Servicio Telefónico Convencional, canal ascendente (del usuario a la oficina central) y canal descendente (de la oficina central al usuario). Otro enfoque llamado DMT, MultiTono Discreto, lo que hace es dividir el espectro disponible de 1.1 MHz en el circuito local en 256 canales independientes de 4312.5 Hz cada uno. El canal 0 se utiliza para el POTS (telefonía) y los canales 1-5 no se emplean para evitar interferencias. De los 250 canales restantes, uno se utiliza para control del flujo ascendente y uno para el control del flujo descendente. El resto está disponible para datos del usuario. Estos canales son unidireccionales y se utilizan más canales para bajar datos que para subir datos, de ahí el nombre de asimétrico.
@@ -173,8 +173,8 @@ El funcionamiento conceptualmente es como si tuviésemos un módem en cada uno d
 
 El estandar ADSL (ANSI T1.413 y el ITU G.992.1) permite velocidades de hasta 8 Mbps para el flujo descendente y 1 Mbps para el flujo ascendente. Al reducir la distancia de bucles de abonado y mejoras en la codificación han aumentado estas prestaciones.
 
-## Transmisiones inalámbricas. Wifi
-#### Potencias de emisión
+## 3 Transmisiones inalámbricas. Wifi
+### 3.1 Potencias de emisión
 Tenemos unos límites muy reducidos de potencia de emisión en las bandas de frecuencia no licenciadas (no es necesario una licencia ni pagar por usarlas). Esto es bueno porque permite coexistir a muchas redes, pero puede que en el exterior sea demasiado restrictivo. Probablemente se debería solicitar un cambio legislativo.
 Como se matiza más adelante, estos límites tienen un efecto sobre la economía y el uso compartido pero no están fijados por tener un impacto sanitario o ambiental. Para esos efectos hay otros límites que también deben cumplir las bandas licenciadas, en las cuales se puede usar mayor potencia que en las libres (en el caso de telefonía móvil, por ejemplo 500 veces más).
 La banda de 2,4GHz está pensada para redes de interior de edificios. Se permite muy poca potencia, 100miliWatios PIRE. Dispone de muy pocos canales (14 canales en los que además se produce solapamiento)
