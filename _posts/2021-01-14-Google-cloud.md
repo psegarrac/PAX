@@ -72,3 +72,36 @@ Las direcciones IP se asignan a los dispositivos de red de los ordenadores, esta
 Una dirección IP contiene dos partes: una parte que indica la red IP en la que está esa dirección y otra parte para diferenciar las direcciones de una misma red.
 Inicialmente se utilizó el **direccionamiento por clases** en el que la diferencia entre la parte de red y la parte de ordenador (dirección dentro de la red) se distribuía según los primeros bits de la dirección IP. Este direccionamiento **ya no se usa** pero es común que aún se hagan referencias a él en los documentos. En la figura siguiente se muestra el direccionamiento por clases.
 
+![Tema2](/PAX/assets/tema4_5.png)
+
+Las direcciones de red las asigna mundialmente un organismo sin ánimo de lucro: **ICANN** (Corporación de Internet para la Asignación de Nombres y Números). Este organismo delega en otras organizaciones que se reparten las asignaciones para continentes (RIR) y éstas a su vez en organizaciones regionales (LIR). Estas organizaciones son las que hacen las asignaciones a los ISPs y a las empresas o instituciones.
+La notación que se usa en las direcciones IPv4 consiste en separar los 4 bytes de una dirección y convertir cada byte a notación decimal. Los valores decimales se separan por puntos: por ejemplo 192.168.1.1 .
+La siguiente figura muestra algunas direcciones especiales.
+
+![Tema2](/PAX/assets/tema2_r1.png)
+
+* Una dirección todo a ceros se usa cuando arranca una máquina y no tiene IP asignada. Probablemente pide la configuración por la red.
+* Una dirección con la parte de red a ceros, indica que es para la red local
+* Una dirección todo a unos es una difusión (broadcast) en la red local.
+* Una dirección con toda la parte de ordenador a unos es una difusión para esa red pero se envía desde otra red.
+* Cualquier IP que empieza por 127 es para dispositivos loopback. Se usan para dispositivos virtuales que devuelven el mensaje. Así alguna aplicaciones que necesitan tener dispositivos de red, pueden funcionar aún sin estar conectados a una red real.
+
+#### 5.1.1 Subredes
+
+Es común que una organización que tenga una dirección red asignada necesite fraccionarla internamente en varias redes. Para esto ya no sirve el direccionamiento por clases, y es necesario definir el uso de un nuevo elemento de la red: la **máscara** de red.
+La máscara de red divide la parte de bits de la red y la parte de direcciones dentro de esa red. La máscara tiene todos los bits de la parte de red a uno y el resto a ceros, de forma que si se hace la operación y entre una dirección de la red y su máscara, se obtiene la dirección cero de la red.
+Por ejemplo, en una universidad es común tener una red IP para cada departamento o uso y que estas redes estén conectadas mediante una LAN rápida que a su vez también conecta con el router que les conecta con Internet o con un ISP. Esta estructura se muestra en la figura siguiente.
+
+![Tema2](/PAX/assets/tema2_r2.png)
+
+Para una red dividirla en subredes (redes IP más pequeñas pero contenidas en la red inicial), lo que se hace es pasar algunos bits (dependiendo de las subredes que se necesiten) de la parte de ordenador a la parte de red. La cantidad de bits usados deben también añadirse a la máscara.
+La figura siguiente muestra lo que era una red de clase B (actualmente con máscara de 16 bits) dividida en 26 subredes (se han usado 6 bits de la parte de ordenador para diferenciar cada subred). Dentro de esa red, ahora se usará una máscara 255.255.252.0 y cada subred puede tener hasta 210 direcciones.
+
+`````
+Se puede usar dos notaciones para indicar la máscara:
+    • Una notación como para la IP, pasando cada byte a decimal: 255.255.252.0
+    • Simplemente indicando el número de unos de la máscara (que han de ser los de mayor peso): /22
+`````
+````
+Las subredes son internas. No se comunican a los organismos que reparten los bloques de red. Desde fuera de la red no son visibles. 
+````
