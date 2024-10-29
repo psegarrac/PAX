@@ -112,14 +112,14 @@ La figura siguiente muestra lo que era una red de clase B (actualmente con másc
 Classless InterDomain Routing. Como ya se ha mencionado, el direccionamiento por clases ya no se usa. Además se ha introducido el concepto de máscara de red para poder subdividir redes. El uso de la máscara para indicar el prefijo de red en la dirección ha sido imprescindible por el uso que se estaba haciendo de las asignaciones de redes. Cuando se asignaban direcciones, los solicitantes no querían de clase C (255 direcciones) y solicitaban al menos de clase B (65.536 direcciones). Como se agotan las direcciones disponibles rápidamente, se empezó a hacer las asignaciones adaptando la máscara de red a algo aproximado a las direcciones solicitadas. De esta forma se aprovecha más las direcciones.
 A partir del uso de CIDR es necesario conocer la máscara de cualquier dirección IP para direccionarla. El proceso de reenvío es un poco más complicado porque hay que comprobar cada destino con la máscara de cada dirección de la tabla de rutas hasta encontrar por dónde se debe enviar el mensaje. 
 
-`````
+>
 El proceso para encontrar por dónde enviar un mensaje. Cada línea de la tabla de rutas tiene una IP destino, una máscara, y una indicación de dónde enviar el mensaje. Por orden decreciente de máscara en la tabla de rutas se hace la operación AND entre la IP destino y la máscara y se compara el resulado con el destino de la línea de la tabla que se está probando. Si coinciden se usará esa ruta.
 Luego en la capa 2 igual hay que enviar a otro router (gateway) para encaminar hacia el destino final o bien es una red conectada y se envía al destino directamente.
-`````
+>
 
-``````
+>
 En una tabla de rutas puede que más de una línea de la tabla que acierte. Se usará la que tenga una máscara con más unos (la más específica o con un prefijo mayor).
-``````
+>
 
 En la figura siguiente se muestra un ejemplo de asignaciones de direcciones. Se supone un prefijo de red 194.24.0.0 a partir del cual se piden redes que hay que ir asignando por orden de llegada. Cambridge (2048 direcciones), Edimburgo (1024 direcciones) y Oxford (4096 direcciones). 
 
