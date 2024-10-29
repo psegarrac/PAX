@@ -14,8 +14,8 @@ urlcolor: CornflowerBlue
 linkcolor: black
 toc-own-page: true
 toc-title: Contenidos
-header-left: UD 3. Hardening del servidor
-header-right: Ciberseguridad
+header-left: 
+header-right: 
 footer-left: IES El Caminàs
 footer-right: \thepage/\pageref{LastPage}
 titlepage-rule-color: 1e2c37

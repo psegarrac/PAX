@@ -129,11 +129,11 @@ En gran medida estos algoritmos sustituyeron en Internet a los de vector de dist
 Ejemplos de protocolos de estado de enlace: OSPF (Open Short Path First) e IS-IS (Intermediate System - Intermediate System).
 Para decidir cambios de rutas, los dos tipos de algoritmos, de vector de distancia o de estado de enlace, podrían trabajar periódicamente o en los momentos en los que se detectan cambios en la red. En cambio, los primeros suelen enviar los vectores de distancia periódicamente, mientras que los segundos suelen reaccionar cuando detectan cambios en la red.
 Los pasos de estos algoritmos son los siguientes:
-    1. Descubrir los vecinos directos.
-    2. Medir el coste para cada uno de los vecinos.
-    3. Construir un mensaje que indique los vecinos y los costes.
-    4. Difundir el mensaje con los vecinos.
-    5. Con los mensajes que se recibe de los demás encaminadores se conoce la topología de la red. Cada nodo calcula su árbol sumidero (las mejores rutas a cada destino).
+  1. Descubrir los vecinos directos.
+  2. Medir el coste para cada uno de los vecinos.
+  3. Construir un mensaje que indique los vecinos y los costes.
+  4. Difundir el mensaje con los vecinos.
+  5. Con los mensajes que se recibe de los demás encaminadores se conoce la topología de la red. Cada nodo calcula su árbol sumidero (las mejores rutas a cada destino).
 Cada uno de los pasos anteriores tiene sus particularidades.
 
 ### 2.4.1 Descubrimiento de vecinos

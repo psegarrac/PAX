@@ -32,7 +32,7 @@ pandoc-latex-environment:
     importantblock: [important]
 ---
 
-## Práctica Realiza la práctica de montar un cable directo y uno cruzado rj45
+## Práctica.-  Realiza la práctica de montar un cable directo y uno cruzado rj45
 
 1. Fabricar un cable de interconexión cruzada (crossover) usando las siguientes tablas y diagramas. Un extremo del cable se debe armar según el estándar T568-A. El otro extremo se debe armar según el estándar T568-B. Esto hace que los
 pares de transmisión y recepción, los pares 2 y 3, queden cruzados, lo que permite que se produzca la comunicación. En Ethernet 10BASE-T o 100BASE-TX sólo se usan cuatro hilos.
