@@ -127,4 +127,4 @@ En la figura siguiente se muestra un ejemplo de asignaciones de direcciones. Se 
 
 En la figura anterior, el bloque marcado como disponible es porque la red de Oxford no cabría con todas sus direcciones. En cambio se debe marcar para asignarlo a otras redes que se soliciten y quepan completamente dentro de él.
 
->Hay que tener en cuenta que si se pide una cantidad de direcciones siempre se debe asignar una potencia de 2 igual o superior porque las redes deben caber enteras con un prefijo y una máscara de red
+>Hay que tener en cuenta que si se pide una cantidad de direcciones >siempre se debe asignar una potencia de 2 igual o superior porque >las redes deben caber enteras con un prefijo y una máscara de red
