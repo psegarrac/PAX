@@ -127,7 +127,9 @@ En la figura siguiente se muestra un ejemplo de asignaciones de direcciones. Se 
 
 En la figura anterior, el bloque marcado como disponible es porque la red de Oxford no cabría con todas sus direcciones. En cambio se debe marcar para asignarlo a otras redes que se soliciten y quepan completamente dentro de él.
 
->Hay que tener en cuenta que si se pide una cantidad de direcciones >siempre se debe asignar una potencia de 2 igual o superior porque >las redes deben caber enteras con un prefijo y una máscara de red
+>
+Hay que tener en cuenta que si se pide una cantidad de direcciones siempre se debe asignar una potencia de 2 igual o superior porque las redes deben caber enteras con un prefijo y una máscara de red.
+>
 
 Una técnica que se usa para reducir el tamaño de las tablas de rutas consiste en la agregación o sumarización de direcciones. La agregación consiste en que un router, puede resumir un conjunto de destinos en un prefijo común (y su correspondiente máscara) siempre y cuando el tráfico para todas las redes resumidas vaya por la misma línea de salida.
 En el ejemplo anterior, si las tres rutas salen por la misma línea, y mientras el bloque libre siga sin asignar, se podrían sumarizar en la dirección 194.24.0.0/19.
@@ -137,10 +139,12 @@ En el ejemplo anterior, si las tres rutas salen por la misma línea, y mientras 
 Network Address Translation. Debido a la escasez de direcciones IPv4 una solución es que muchas redes privadas no tengan direcciones públicas de Internet y usen rangos de direcciones que no pueden usarse en Internet. Estos rangos de direcciones **privadas** no están asignadas a nadie en Internet y los routers nos las encaminan.
 NAT es el mecanismo que permite que los ordenadores de una red privada conecten con Internet usando una dirección pública.
 
+>
 Rangos de direcciones privadas:
 * 10.0.0.0/8
 * 172.16.0.0/12
 * 192.168.0.0/16
+>
 
 ![Tema2](/PAX/assets/tema2_r4.png)
 
