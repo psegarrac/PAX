@@ -76,3 +76,4 @@ Hay cabeceras opcionales de tamaño fijo o de tamaño variable, las cuales puede
      * Descartar el mensaje y no devolver un mensaje de control a una dirección de multicast.
 * Longitud. 1 byte para indicar los bytes de campo valor (máximo 255 bytes).
 * Valor. Sería la información o carga útil de la opción.
+
