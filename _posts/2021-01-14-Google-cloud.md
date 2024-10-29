@@ -128,3 +128,28 @@ En la figura siguiente se muestra un ejemplo de asignaciones de direcciones. Se 
 En la figura anterior, el bloque marcado como disponible es porque la red de Oxford no cabría con todas sus direcciones. En cambio se debe marcar para asignarlo a otras redes que se soliciten y quepan completamente dentro de él.
 
 >Hay que tener en cuenta que si se pide una cantidad de direcciones >siempre se debe asignar una potencia de 2 igual o superior porque >las redes deben caber enteras con un prefijo y una máscara de red
+
+Una técnica que se usa para reducir el tamaño de las tablas de rutas consiste en la agregación o sumarización de direcciones. La agregación consiste en que un router, puede resumir un conjunto de destinos en un prefijo común (y su correspondiente máscara) siempre y cuando el tráfico para todas las redes resumidas vaya por la misma línea de salida.
+En el ejemplo anterior, si las tres rutas salen por la misma línea, y mientras el bloque libre siga sin asignar, se podrían sumarizar en la dirección 194.24.0.0/19.
+
+#### 5.1.3 NAT
+
+Network Address Translation. Debido a la escasez de direcciones IPv4 una solución es que muchas redes privadas no tengan direcciones públicas de Internet y usen rangos de direcciones que no pueden usarse en Internet. Estos rangos de direcciones **privadas** no están asignadas a nadie en Internet y los routers nos las encaminan.
+NAT es el mecanismo que permite que los ordenadores de una red privada conecten con Internet usando una dirección pública.
+
+Rangos de direcciones privadas:
+* 10.0.0.0/8
+* 172.16.0.0/12
+* 192.168.0.0/16
+
+![Tema2](/PAX/assets/tema2_r4.png)
+
+En la figura anterior, una red de una empresa (por ejemplo usando la red 10.0.0.0/24) accede a internet usando una IP prestada por un operador ISP (la 198.60.42.12). Esta última es una dirección válida en Internet de las direcciones que ese ISP tiene asignadas.
+Para que esto funcione, lo que se hace es lo siguiente:
+  1. Un proceso de un ordenador de la red local inicia un conexión a un servidor de Internet: IP-origenpriv(10.0.0.1), IP-destinopub(150.128.98.62), Puerto-origen(12456), Puerto-destinoservidor(80) (los puertos son de la capa de transporte, protocolos TCP o UDP).
+  2. Como el mensaje atraviesa la caja NAT al dirigirlo a Internet, se intercepta y se cambia la IP-origen por la IP-origen pública para que puedan contestar de internet: IP-origenpub(198.60.42.12), IP-destinopub(150.128.98.62), Indice, Puerto-destinoservidor(80).
+  3.  En el puerto origen se ha puesto un índice. La caja NAT guarda en una tabla indexada: Indice, la IP-origenpriv(10.0.0.1) y el Puerto-origen(12456).
+  4. Contestan desde Internet: IP-origenpub(150.128.98.62), IP-destinopub(198.60.42.12), Puerto-origenservidor(80), Indice.
+  5. La caja NAT busca el índice y restaura el mensaje con la IP y puerto iniciales para enviarlo a la red privada: IP-origenpub(150.128.98.62), IP-destinopriv(10.0.0.1), Puerto-origenservidor(80), Puerto-destino(12456).
+NAT es un mecanismo muy controvertido porque trastoca direcciones de la capa de transporte para resolver un problema de la capa de red (la falta de direcciones). Al romper la separación de las capas de red, puede haber aplicaciones o protocolos que fallen. Por ejemplo, se usa las direcciones de puerto de los protocolos de la capa de transporte TCP o UDP. Otros protocolos que usen otras direcciones fallarían. También puede ocurrir que haya aplicaciones que en sus protocolos usan la dirección de puerto de transporte. Al modificarlo podría afectar a estas aplicaciones.
+
