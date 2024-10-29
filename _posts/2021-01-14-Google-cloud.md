@@ -103,7 +103,8 @@ Se puede usar dos notaciones para indicar la máscara:
     • Simplemente indicando el número de unos de la máscara (que han de ser los de mayor peso): /22
 `````
 ````
-Las subredes son internas. No se comunican a los organismos que reparten los bloques de red. Desde fuera de la red no son visibles. 
+Las subredes son internas. No se comunican a los organismos que reparten los bloques de red. 
+Desde fuera de la red no son visibles. 
 
 ````
 #### 5.1.2 CIDR
