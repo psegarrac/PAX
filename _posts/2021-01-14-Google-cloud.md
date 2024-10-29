@@ -89,7 +89,7 @@ La siguiente figura muestra algunas direcciones especiales.
 #### 5.1.1 Subredes
 
 Es común que una organización que tenga una dirección red asignada necesite fraccionarla internamente en varias redes. Para esto ya no sirve el direccionamiento por clases, y es necesario definir el uso de un nuevo elemento de la red: la **máscara** de red.
-La máscara de red divide la parte de bits de la red y la parte de direcciones dentro de esa red. La máscara tiene todos los bits de la parte de red a uno y el resto a ceros, de forma que si se hace la operación y entre una dirección de la red y su máscara, se obtiene la dirección cero de la red.
+La máscara de red divide la parte de bits de la red y la parte de direcciones dentro de esa red. La máscara tiene todos los bits de la parte de red a uno y el resto a ceros, de forma que si se hace la operación **AND** entre una dirección de la red y su máscara, se obtiene la dirección cero de la red.
 Por ejemplo, en una universidad es común tener una red IP para cada departamento o uso y que estas redes estén conectadas mediante una LAN rápida que a su vez también conecta con el router que les conecta con Internet o con un ISP. Esta estructura se muestra en la figura siguiente.
 
 ![Tema2](/PAX/assets/tema2_r2.png)
